@@ -4,12 +4,15 @@ import Image from 'next/image'
 import ThumbnailImg from '../public/test_thumbnail.jpg'
 import { Footer } from '../components/footer'
 import styles from '../styles/Home.module.css'
-import { Burger, MediaQuery } from '@mantine/core';
+import { Burger, Button, MediaQuery } from '@mantine/core';
+import { useToggle } from '@mantine/hooks';
 import { useState } from 'react'
 
 const Home: NextPage = () => {
   const [opened, setOpened] = useState(false);
   const title = opened ? 'Close navigation' : 'Open navigation';
+
+  const [value, toggle] = useToggle(['🌙', '☀️']);
 
   return (
     <div className={styles.wrapper}>
@@ -36,7 +39,11 @@ const Home: NextPage = () => {
               <li><a href="#portfolio">portfolio</a></li>
               <li><a href="#contact">contact</a></li>
             </ul>
-            <div>🌙</div>
+            <div className={styles.btn_toggle}>
+              <Button variant="default" radius="xs" size="xs" onClick={() => toggle()}>
+                {value}
+              </Button>
+            </div>
           </nav>
         </div>
       </header>
