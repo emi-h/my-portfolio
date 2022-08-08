@@ -4,8 +4,13 @@ import Image from 'next/image'
 import ThumbnailImg from '../public/test_thumbnail.jpg'
 import { Footer } from '../components/footer'
 import styles from '../styles/Home.module.css'
+import { Burger, MediaQuery } from '@mantine/core';
+import { useState } from 'react'
 
 const Home: NextPage = () => {
+  const [opened, setOpened] = useState(false);
+  const title = opened ? 'Close navigation' : 'Open navigation';
+
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -16,6 +21,13 @@ const Home: NextPage = () => {
 
       <header className={styles.header}>
         <div className={styles.header_inner}>
+          <MediaQuery largerThan="xs" styles={{ display: 'none' }}>
+            <Burger
+              opened={opened}
+              onClick={() => setOpened((o) => !o)}
+              title={title}
+            />
+          </MediaQuery>
           <h1 className={styles.logo}>Emi Portfolio</h1>
           <nav className={styles.nav}>
             <ul>
