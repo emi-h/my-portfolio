@@ -1,129 +1,161 @@
-.container {
-  padding: 0 2rem;
-}
-
-.main {
+.wrapper{
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
-.footer {
-  display: flex;
+.wrapper .main{
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
 }
-
-.footer a {
+.header{
+  min-height:65px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
+}
+.header_inner{
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  font-size: 18px;
+  font-weight: 700;
+}
+.nav{
+  display: flex;
+}
+@media (max-width: 767px){
+  .nav{
+    display: none;
+  }
+}
+.nav ul{
+  display: flex;
+}
+.nav ul li a{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 0 16px;
+}
+.mv{
+  min-height: 248px;
+  color: #fff;
+  background: #E64980;
+  display: flex;
+  align-items: center;
+}
+.mv_inner{
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.mv h2{
+  font-size: 36px;
+  font-weight: 700px;
+}
+.mv p{
+  font-size: 16px;
+  font-weight: 700px;
+}
+.content section{
+  padding: 80px 0 20px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.content_inner{
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.content h2{
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #E9ECEF;
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.blog ul li{
+  margin-bottom: 24px;
 }
-
-.title,
-.description {
+.blog h3{
+  font-size: 22px;
+  font-weight: 700;
+}
+.blog p{
+  font-size: 16px;
+  font-weight: 500;
+}
+.blog time{
+  font-size: 12px;
+  font-weight: 700;
+  color: #909296;
+}
+.btn_wrapper{
   text-align: center;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.btn{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 10px 22px;
+  border-radius: 32px;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.portfolio_body ul{
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.portfolio_body ul li{
+  width: 31%;
+  margin-bottom: 40px;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.portfolio_body ul li:not(:nth-child(3n)){
+  margin-right: calc(7% / 2);
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+@media (max-width: 767px){
+  .portfolio_body ul{
+    justify-content: space-between;
+  }
+  .portfolio_body ul li{
+    width: 49%;
+  }
+  .portfolio_body ul li:not(:nth-child(3n)){
+    margin-right: 0;
+  }
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+@media (max-width: 600px){
+  .portfolio_body ul li{
     width: 100%;
+  }
+}
+
+.portfolioCard figure{
+  width: 100%;
+}
+.wrapper_gitTw{
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper_gitTw>section{
+  width: 45.6%;
+}
+@media (max-width: 600px){
+  .wrapper_gitTw{
     flex-direction: column;
   }
+  .wrapper_gitTw>section{
+    width: 100%;
+  }
 }
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.github_body ul li{
+  margin-bottom: 40px;
+}
+.twitter_body ul li{
+  margin-bottom: 78px;
 }
