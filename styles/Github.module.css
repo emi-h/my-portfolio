@@ -1,6 +1,86 @@
+.github_body ul{
+  margin-bottom: 32px;
+}
 .github_body ul li{
   margin-bottom: 40px;
 }
-.twitter_body ul li{
-  margin-bottom: 78px;
+.github_body h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+.github_body p{
+  font-size: 16px;
+  margin-top: 8px;
+}
+.icons{
+  color: #909296;
+  display: flex;
+  margin-top: 8px;
+}
+.icon{
+  margin-right: 20px;
+}
+.icon span{
+  font-size: 12px;
+  vertical-align: middle;
+}
+.icon span:nth-child(1){
+  margin-right: 6px;
+}
+.langBar{
+  width: 100%;
+  height: 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.langBar_inner{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.langBar_inner span:nth-child(1){
+  width: 65.5%;
+  background: #3178C6;
+}
+.langBar_inner span:nth-child(2){
+  width: 33.7%;
+  background: #F1E05A;
+}
+.langBar_inner span:nth-child(3){
+  width: 0.8%;
+  background: #EDEDED;
+}
+
+.langText{
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.lang{
+  margin-right: 20px;
+}
+.lang::before{
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  margin-right: 6px;
+}
+.lang:nth-child(1)::before{
+  background: #3178C6;
+}
+.lang:nth-child(2)::before{
+  background: #F1E05A;
+}
+.lang:nth-child(3)::before{
+  background: #EDEDED;
+}
+.lang span:first-child{
+  margin-right: 6px;
+}
+.ratio{
+  color: #909296;
 }
