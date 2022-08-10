@@ -6,68 +6,9 @@
 .wrapper .main{
   flex: 1;
 }
-.header{
-  min-height:65px;
-  display: flex;
-  align-items: center;
-}
-.header_inner{
-  width: 1000px;
-  max-width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-.logo{
-  font-size: 18px;
-  font-weight: 700;
-}
-.nav{
-  display: flex;
-}
-@media (max-width: 576px){
-  .nav{
-    display: none;
-  }
-}
-.nav ul{
-  display: flex;
-}
-.nav ul li a{
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: capitalize;
-  padding: 0 8px;
-}
-.btn_toggle{
-  margin-left: 8px;
-}
-.mv{
-  min-height: 248px;
-  color: #fff;
-  background: #E64980;
-  display: flex;
-  align-items: center;
-}
-.mv_inner{
-  width: 1000px;
-  max-width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-.mv h2{
-  font-size: 36px;
-  font-weight: 700px;
-}
-.mv p{
-  font-size: 16px;
-  font-weight: 700px;
-}
 .content section{
   padding: 80px 0 20px;
 }
-
 .content_inner{
   width: 1000px;
   max-width: 100%;
@@ -82,22 +23,6 @@
   margin-bottom: 24px;
   border-bottom: 2px solid #E9ECEF;
 }
-.blog ul li{
-  margin-bottom: 24px;
-}
-.blog h3{
-  font-size: 22px;
-  font-weight: 700;
-}
-.blog p{
-  font-size: 16px;
-  font-weight: 500;
-}
-.blog time{
-  font-size: 12px;
-  font-weight: 700;
-  color: #909296;
-}
 .btn_wrapper{
   text-align: center;
 }
@@ -109,56 +34,6 @@
   background-color: #000;
   padding: 10px 22px;
   border-radius: 32px;
-}
-.portfolio_body ul{
-  display: flex;
-  flex-wrap: wrap;
-}
-.portfolio_body ul li{
-  width: 31%;
-  margin-bottom: 40px;
-}
-.portfolio_body ul li:not(:nth-child(3n)){
-  margin-right: calc(7% / 2);
-}
-.portfolio_body ul li figure{
-  margin-bottom: 16px;
-}
-.portfolio_body ul li h3{
-  font-size: 22px;
-  font-weight: 700;
-}
-.portfolio_body ul li p{
-  font-size: 16px;
-  font-weight: 500;
-  color: #25262B;
-  margin-top: 8px;
-}
-.portfolio_body ul li time{
-  font-size: 12px;
-  font-weight: 700;
-  color: #909296;
-  margin-top: 8px;
-}
-@media (max-width: 767px){
-  .portfolio_body ul{
-    justify-content: space-between;
-  }
-  .portfolio_body ul li{
-    width: 49%;
-  }
-  .portfolio_body ul li:not(:nth-child(3n)){
-    margin-right: 0;
-  }
-}
-@media (max-width: 576px){
-  .portfolio_body ul li{
-    width: 100%;
-  }
-}
-
-.portfolioCard figure{
-  width: 100%;
 }
 .wrapper_gitTw{
   display: flex;
@@ -174,10 +49,4 @@
   .wrapper_gitTw>section{
     width: 100%;
   }
-}
-.github_body ul li{
-  margin-bottom: 40px;
-}
-.twitter_body ul li{
-  margin-bottom: 78px;
 }
