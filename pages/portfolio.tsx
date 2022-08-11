@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Mv from "../components/Mv"
 import PortfolioContent from "../components/PortfolioContent"
@@ -15,7 +15,7 @@ const Portfolio: NextPage = () => {
                     <PortfolioContent />
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
