@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import Mv from '../components/Mv'
 import BlogContent from '../components/BlogContent'
 import PortfolioContent from '../components/PortfolioContent'
-import GitHub from '../components/Github'
+// import GitHub from '../components/Github'
 import Twitter from '../components/Twitter'
 
 const Home: NextPage = () => {
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             <BlogContent />
             <PortfolioContent />
             <div className={styles.wrapper_gitTw}>
-              <GitHub />
+              {/* <GitHub /> */}
               <Twitter />
             </div>
           </div>
