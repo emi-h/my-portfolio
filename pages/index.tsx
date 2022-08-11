@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Mv } from '../components/Mv'
-import { Blog } from '../components/Blog'
-import { Portfolio } from '../components/Portfolio'
+import { BlogContent } from '../components/BlogContent'
+import { PortfolioContent } from '../components/PortfolioContent'
 import { GitHub } from '../components/Github'
 import { Twitter } from '../components/Twitter'
 
@@ -24,8 +24,8 @@ const Home: NextPage = () => {
         <Mv />
         <div className={styles.content}>
           <div className={styles.content_inner}>
-            <Blog />
-            <Portfolio />
+            <BlogContent />
+            <PortfolioContent />
             <div className={styles.wrapper_gitTw}>
               <GitHub />
               <Twitter />
