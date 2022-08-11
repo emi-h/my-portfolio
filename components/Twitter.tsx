@@ -16,8 +16,6 @@ export const Twitter = () => {
                         sourceType="profile"
                         userId={'1254763822050467840'}
                     />
-                    {/* <a class="twitter-timeline" data-height="500" data-theme="dark" href="https://twitter.com/emi11882681?ref_src=twsrc%5Etfw">Tweets by emi11882681</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
                 </div>
             </div>
             <Btn text='View on Twitter' url='https://twitter.com/emi11882681' />

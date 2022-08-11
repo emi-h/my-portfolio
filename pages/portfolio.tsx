@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Mv } from "../components/Mv"
 import { PortfolioContent } from "../components/PortfolioContent"
@@ -13,6 +14,7 @@ function Portfolio() {
                     <PortfolioContent />
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

@@ -1,4 +1,5 @@
 import { BlogContent } from "../components/BlogContent"
+import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Mv } from "../components/Mv"
 import styles from '../styles/Home.module.css'
@@ -13,6 +14,7 @@ function Blog() {
                     <BlogContent />
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

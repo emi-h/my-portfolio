@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Mv } from "../components/Mv"
 import styles from '../styles/Home.module.css'
@@ -12,6 +13,7 @@ function Contact() {
                     <p>準備中</p>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
