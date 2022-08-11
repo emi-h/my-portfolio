@@ -1,6 +1,6 @@
-import { Header } from "../components/Header"
-import { Mv } from "../components/Mv"
-import { AboutContent } from '../components/AboutContent'
+import Header from "../components/Header"
+import Mv from "../components/Mv"
+import AboutContent from '../components/AboutContent'
 import styles from '../styles/Home.module.css'
 import { NextPage } from "next"
 

@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import { Mv } from '../components/Mv'
-import { BlogContent } from '../components/BlogContent'
-import { PortfolioContent } from '../components/PortfolioContent'
-import { GitHub } from '../components/Github'
-import { Twitter } from '../components/Twitter'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Mv from '../components/Mv'
+import BlogContent from '../components/BlogContent'
+import PortfolioContent from '../components/PortfolioContent'
+import GitHub from '../components/Github'
+import Twitter from '../components/Twitter'
 
 const Home: NextPage = () => {
 

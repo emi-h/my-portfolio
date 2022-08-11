@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from '../styles/AboutContent.module.css'
 
-export const AboutContent: FC = () => {
+const AboutContent: FC = () => {
     return (
         <>
             <div className={styles.aboutContent}>
@@ -11,3 +11,4 @@ export const AboutContent: FC = () => {
         </>
     )
 }
+export default AboutContent;

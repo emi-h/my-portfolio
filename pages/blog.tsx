@@ -1,7 +1,7 @@
-import { BlogContent } from "../components/BlogContent"
-import { Header } from "../components/Header"
-import { Footer } from "../components/Footer"
-import { Mv } from "../components/Mv"
+import BlogContent from "../components/BlogContent"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import Mv from "../components/Mv"
 import styles from '../styles/Home.module.css'
 import { NextPage } from "next"
 

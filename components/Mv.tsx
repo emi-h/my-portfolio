@@ -6,7 +6,7 @@ import iconFB from '../public/i_fb.svg'
 import iconLines from '../public/i_lines.svg'
 import { FC } from 'react'
 
-export const Mv: FC = () => {
+const Mv: FC = () => {
     return (
         <div className={styles.mv}>
             <div className={styles.mv_inner}>
@@ -51,3 +51,4 @@ export const Mv: FC = () => {
         </div>
     )
 }
+export default Mv;

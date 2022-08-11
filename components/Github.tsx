@@ -2,11 +2,11 @@ import Image from 'next/image'
 import styles from '../styles/GitHub.module.css'
 import StarImg from '../public/i_star.svg'
 import BranchImg from '../public/i_branch.svg'
-import { Btn } from './Btn'
+import Btn from './Btn'
 import Link from 'next/link'
 import { FC } from 'react'
 
-export const GitHub: FC = () => {
+const GitHub: FC = () => {
     return (
         <section className={styles.github} id="github">
             <h2>github</h2>
@@ -218,3 +218,5 @@ export const GitHub: FC = () => {
         </section>
     )
 }
+
+export default GitHub;

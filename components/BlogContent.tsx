@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { FC } from 'react'
 import styles from '../styles/Blog.module.css'
-import { Btn } from './Btn'
+import Btn from './Btn'
 
-export const BlogContent: FC = () => {
+const BlogContent: FC = () => {
     return (
         <section className={styles.blog} id="blog">
             <h2>blog</h2>
@@ -60,3 +60,4 @@ export const BlogContent: FC = () => {
         </section>
     )
 }
+export default BlogContent;

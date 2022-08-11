@@ -4,7 +4,7 @@ import { useToggle } from '@mantine/hooks';
 import styles from '../styles/Header.module.css'
 import Link from "next/link";
 
-export const Header: FC = () => {
+const Header: FC = () => {
     const [opened, setOpened] = useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
     const BurgerOpenClass = opened ? styles.close : '';
@@ -47,3 +47,5 @@ export const Header: FC = () => {
         </header >
     )
 }
+
+export default Header;

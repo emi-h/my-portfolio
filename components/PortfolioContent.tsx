@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { FC } from 'react'
 import ThumbnailImg from '../public/test_thumbnail.jpg'
 import styles from '../styles/Portfolio.module.css'
-import { Btn } from './Btn'
+import Btn from './Btn'
 
-export const PortfolioContent: FC = () => {
+const PortfolioContent: FC = () => {
     return (
         <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
@@ -92,3 +92,5 @@ export const PortfolioContent: FC = () => {
         </section>
     )
 }
+
+export default PortfolioContent;

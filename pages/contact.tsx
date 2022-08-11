@@ -1,7 +1,7 @@
 import { NextPage } from "next"
-import { Footer } from "../components/Footer"
-import { Header } from "../components/Header"
-import { Mv } from "../components/Mv"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import Mv from "../components/Mv"
 import styles from '../styles/Home.module.css'
 
 const Contact: NextPage = () => {

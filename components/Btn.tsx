@@ -6,10 +6,11 @@ type BtnProps = {
     url: string;
 }
 
-export const Btn: FC<BtnProps> = (props) => {
+const Btn: FC<BtnProps> = (props) => {
     return (
         <div className={styles.btn_wrapper}>
             <a className={styles.btn} href={props.url}>{props.text}</a>
         </div>
     )
 }
+export default Btn;
