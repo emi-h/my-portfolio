@@ -15,7 +15,7 @@ const Blog: NextPage = () => {
                     <BlogContent />
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
