@@ -3,7 +3,7 @@ import Mv from "../components/Mv"
 import AboutContent from '../components/AboutContent'
 import styles from '../styles/Home.module.css'
 import { NextPage } from "next"
-// import Footer from "../components/Footer"
+import Footer from "../components/Footer"
 
 const About: NextPage = () => {
     return (
@@ -18,7 +18,7 @@ const About: NextPage = () => {
                     </section>
                 </div>
             </div>
-            {/* <Footer/> */}
+            <Footer />
         </>
     )
 }
