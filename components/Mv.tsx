@@ -4,8 +4,9 @@ import styles from '../styles/Mv.module.css'
 import iconTW from '../public/i_twitter.svg'
 import iconFB from '../public/i_fb.svg'
 import iconLines from '../public/i_lines.svg'
+import { FC } from 'react'
 
-export const Mv = () => {
+export const Mv: FC = () => {
     return (
         <div className={styles.mv}>
             <div className={styles.mv_inner}>

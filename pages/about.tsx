@@ -2,8 +2,9 @@ import { Header } from "../components/Header"
 import { Mv } from "../components/Mv"
 import { AboutContent } from '../components/AboutContent'
 import styles from '../styles/Home.module.css'
+import { NextPage } from "next"
 
-function About() {
+const About: NextPage = () => {
     return (
         <>
             <Header />

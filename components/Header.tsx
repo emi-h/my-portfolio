@@ -1,10 +1,10 @@
 import { Burger, Button, MediaQuery } from "@mantine/core"
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { useToggle } from '@mantine/hooks';
 import styles from '../styles/Header.module.css'
 import Link from "next/link";
 
-export const Header = () => {
+export const Header: FC = () => {
     const [opened, setOpened] = useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
     const BurgerOpenClass = opened ? styles.close : '';

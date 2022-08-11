@@ -4,8 +4,9 @@ import StarImg from '../public/i_star.svg'
 import BranchImg from '../public/i_branch.svg'
 import { Btn } from './Btn'
 import Link from 'next/link'
+import { FC } from 'react'
 
-export const GitHub = () => {
+export const GitHub: FC = () => {
     return (
         <section className={styles.github} id="github">
             <h2>github</h2>

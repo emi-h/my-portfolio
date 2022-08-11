@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import styles from '../styles/Footer.module.css'
 
-export const Footer = () => {
+export const Footer: FC = () => {
     return (
         <footer className={styles.footer}>
             <small>&copy; 2022 Emi H</small>

@@ -1,9 +1,10 @@
+import { NextPage } from "next"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Mv } from "../components/Mv"
 import styles from '../styles/Home.module.css'
 
-function Contact() {
+const Contact: NextPage = () => {
     return (
         <>
             <Header />

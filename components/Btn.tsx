@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import styles from '../styles/Btn.module.css'
 
 type BtnProps = {
@@ -5,7 +6,7 @@ type BtnProps = {
     url: string;
 }
 
-export const Btn = (props: BtnProps) => {
+export const Btn: FC<BtnProps> = (props) => {
     return (
         <div className={styles.btn_wrapper}>
             <a className={styles.btn} href={props.url}>{props.text}</a>

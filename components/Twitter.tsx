@@ -1,8 +1,9 @@
+import { FC } from 'react'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import styles from '../styles/Twitter.module.css'
 import { Btn } from './Btn'
 
-export const Twitter = () => {
+export const Twitter: FC = () => {
     return (
         <section className={styles.twitter} id="twitter">
             <h2>twitter</h2>
