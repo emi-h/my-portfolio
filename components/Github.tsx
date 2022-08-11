@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../styles/GitHub.module.css'
+import styles from './GitHub.module.css'
 import StarImg from '../public/i_star.svg'
 import BranchImg from '../public/i_branch.svg'
 import Btn from './Btn'
