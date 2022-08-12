@@ -7,13 +7,17 @@ import styles from '../styles/Home.module.css'
 const Portfolio: NextPage = () => {
     return (
         <>
-            <Header />
-            <div className={styles.content}>
-                <div className={styles.content_inner}>
-                    <PortfolioContent />
-                </div>
+            <div className={styles.wrapper}>
+                <Header />
+                <main className={styles.main}>
+                    <div className={styles.content}>
+                        <div className={styles.content_inner}>
+                            <PortfolioContent />
+                        </div>
+                    </div>
+                </main>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }

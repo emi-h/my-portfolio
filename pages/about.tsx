@@ -7,16 +7,20 @@ import Footer from "../components/Footer"
 const About: NextPage = () => {
     return (
         <>
-            <Header />
-            <div className={styles.content}>
-                <div className={styles.content_inner}>
-                    <section>
-                        <h2>about</h2>
-                        <AboutContent />
-                    </section>
-                </div>
+            <div className={styles.wrapper}>
+                <Header />
+                <main className={styles.main}>
+                    <div className={styles.content}>
+                        <div className={styles.content_inner}>
+                            <section>
+                                <h2>about</h2>
+                                <AboutContent />
+                            </section>
+                        </div>
+                    </div>
+                </main>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }
