@@ -4,7 +4,7 @@ import styles from '../styles/Header.module.css'
 import Link from "next/link";
 import { IconSun, IconMoonStars } from '@tabler/icons';
 
-const Header: FC = () => {
+export const Header: FC = () => {
     const [opened, setOpened] = useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
     const BurgerOpenClass = opened ? styles.close : '';
