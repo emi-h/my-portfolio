@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
-import Header from "./Header"
-import Footer from "./Footer"
-import styles from '../styles/Layout.module.css'
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
+import styles from './Layout.module.css'
 
 type LayoutProps = Required<{
       readonly children: ReactElement

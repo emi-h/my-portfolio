@@ -1,6 +1,6 @@
 import { ActionIcon, Burger, MediaQuery, useMantineColorScheme } from "@mantine/core"
 import { FC, useState } from 'react';
-import styles from '../styles/Header.module.css'
+import styles from './Header.module.css'
 import Link from "next/link";
 import { IconSun, IconMoonStars } from '@tabler/icons';
 

@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import PortfolioContent from "../components/PortfolioContent"
+import PortfolioContent from "../components/PortfolioContent/PortfolioContent"
 import styles from '../styles/Home.module.css'
 
 const Portfolio: NextPage = () => {

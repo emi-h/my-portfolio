@@ -1,6 +1,6 @@
 import { NextPage } from "next"
 import styles from '../styles/Home.module.css'
-import Form from "../components/Form";
+import Form from "../components/Form/Form";
 
 const Contact: NextPage = () => {
     return (

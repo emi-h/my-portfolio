@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import styles from '../styles/Blog.module.css'
-import Btn from './Btn'
+import styles from './BlogContent.module.css'
+import Btn from '../Btn/Btn'
 
 const BlogContent: FC = () => {
     return (

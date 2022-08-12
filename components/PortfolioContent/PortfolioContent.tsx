@@ -1,10 +1,10 @@
 
 import Image from 'next/image'
 import { FC } from 'react'
-import ThumbnailImg from '../public/test_thumbnail.jpg'
-import ThumbnailImg2 from '../public/test_thumbnail2.jpg'
-import styles from '../styles/Portfolio.module.css'
-import Btn from './Btn'
+import ThumbnailImg from '../../public/test_thumbnail.jpg'
+import ThumbnailImg2 from '../../public/test_thumbnail2.jpg'
+import styles from './Portfolio.module.css'
+import Btn from '../Btn/Btn'
 
 const PortfolioContent: FC = () => {
     return (

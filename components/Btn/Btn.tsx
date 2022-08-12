@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from '../styles/Btn.module.css'
+import styles from './Btn.module.css'
 
 type BtnProps = {
     text: string;

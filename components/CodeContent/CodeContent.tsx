@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import styles from '../styles/CodeContent.module.css'
-import StarImg from '../public/i_star.svg'
-import BranchImg from '../public/i_forkshape.svg'
-import Btn from './Btn'
+import styles from './CodeContent.module.css'
+import StarImg from '../../public/i_star.svg'
+import BranchImg from '../../public/i_forkshape.svg'
+import Btn from '../Btn/Btn'
 import Link from 'next/link'
 import { FC } from 'react'
 
