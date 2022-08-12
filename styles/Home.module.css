@@ -31,10 +31,14 @@
   width: 45.6%;
 }
 @media (max-width: 576px){
+  .content section{
+    padding: 40px 0 20px;
+  }
   .wrapper_gitTw{
     flex-direction: column;
   }
   .wrapper_gitTw>section{
     width: 100%;
   }
+
 }
