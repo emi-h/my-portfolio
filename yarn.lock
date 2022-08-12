@@ -665,6 +665,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tabler/icons@^1.81.0":
+  version "1.81.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-1.81.0.tgz#f32a9afcaf9c876ad902fb0a531bf5c47d6e2336"
+  integrity sha512-Wgu/DYcbmUPvvsFWfhZ1Yn/hrlz4rrIuGk0+ZuEsr8fZmiZpELBDLPu+u4wftkxoiFEZpf4g63vAoonIiYbEzA==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
