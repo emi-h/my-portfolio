@@ -22,6 +22,20 @@
   color: #25262B;
   margin-top: 8px;
 }
+
+.portfolio_body ul li figure{
+  width: 100%;
+  height: 184px;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio_body ul li figure span,
+.portfolio_body ul li figure img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .portfolio_body ul li time{
   font-size: 12px;
   font-weight: 700;
