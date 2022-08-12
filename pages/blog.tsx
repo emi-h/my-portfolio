@@ -7,8 +7,11 @@ const Blog: NextPage = () => {
         <>
             <div className={styles.content}>
                 <div className={styles.content_inner}>
-                    <section>
-                        <BlogContent />
+                    <section className={styles.blog} id="blog">
+                        <h2>blog</h2>
+                        <div className={styles.blog_body}>
+                            <BlogContent />
+                        </div>
                     </section>
                 </div>
             </div>

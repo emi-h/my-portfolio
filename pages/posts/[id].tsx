@@ -1,20 +1,17 @@
 import { NextPage } from "next"
-// import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import Mv from "../../components/Mv"
+import BlogDetailContent from "../../components/BlogDetailContent/BlogDetailContent"
 import styles from '../../styles/Home.module.css'
 
 const Post: NextPage = () => {
     return (
         <>
-            <Header />
-            <Mv />
-            <div className={styles.content}>
-                <div className={styles.content_inner}>
-                    <p>投稿詳細</p>
+            <section>
+                <div className={styles.content}>
+                    <div className={styles.content_inner}>
+                        <BlogDetailContent />
+                    </div>
                 </div>
-            </div>
-            {/* <Footer /> */}
+            </section>
         </>
     )
 }

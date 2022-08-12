@@ -7,7 +7,12 @@ const Portfolio: NextPage = () => {
         <>
             <div className={styles.content}>
                 <div className={styles.content_inner}>
-                    <PortfolioContent />
+                    <section className={styles.portfolio} id="portfolio">
+                        <h2>portfolio</h2>
+                        <div className={styles.portfolio_body}>
+                            <PortfolioContent />
+                        </div>
+                    </section>
                 </div>
             </div>
         </>

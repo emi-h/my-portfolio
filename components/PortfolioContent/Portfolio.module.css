@@ -1,59 +1,59 @@
-.portfolio_body ul{
+.list{
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio_body ul li{
+.list li{
   width: 31%;
   margin-bottom: 40px;
 }
-.portfolio_body ul li:not(:nth-child(3n)){
+.list li:not(:nth-child(3n)){
   margin-right: calc(7% / 2);
 }
-.portfolio_body ul li figure{
+.list li figure{
   margin-bottom: 16px;
 }
-.portfolio_body ul li h3{
+.list li h3{
   font-size: 22px;
   font-weight: 700;
 }
-.portfolio_body ul li p{
+.list li p{
   font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
 }
 
-.portfolio_body ul li figure{
+.list li figure{
   width: 100%;
   height: 184px;
   position: relative;
   overflow: hidden;
 }
-.portfolio_body ul li figure span,
-.portfolio_body ul li figure img{
+.list li figure span,
+.list li figure img{
   display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.portfolio_body ul li time{
+.list li time{
   font-size: 12px;
   font-weight: 700;
   color: #909296;
   margin-top: 8px;
 }
 @media (max-width: 767px){
-  .portfolio_body ul{
+  .list{
     justify-content: space-between;
   }
-  .portfolio_body ul li{
+  .list li{
     width: 49%;
   }
-  .portfolio_body ul li:not(:nth-child(3n)){
+  .list li:not(:nth-child(3n)){
     margin-right: 0;
   }
 }
 @media (max-width: 576px){
-  .portfolio_body ul li{
+  .list li{
     width: 100%;
   }
 }
