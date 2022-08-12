@@ -1,8 +1,9 @@
-import Image from 'next/image'
-import { FC } from 'react'
-import ThumbnailImg from '../../public/test_thumbnail.jpg'
-import ThumbnailImg2 from '../../public/test_thumbnail2.jpg'
-import styles from './Portfolio.module.css'
+import React from "react";
+import Image from "next/image";
+import { FC } from "react";
+import ThumbnailImg from "../../public/test_thumbnail.jpg";
+import ThumbnailImg2 from "../../public/test_thumbnail2.jpg";
+import styles from "./Portfolio.module.css";
 
 const PortfolioContent: FC = () => {
     return (
@@ -93,7 +94,7 @@ const PortfolioContent: FC = () => {
                 </a>
             </li>
         </ul>
-    )
-}
+    );
+};
 
 export default PortfolioContent;

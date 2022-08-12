@@ -1,5 +1,6 @@
-import { FC } from 'react';
-import styles from './Btn.module.css'
+import React from "react";
+import { FC } from "react";
+import styles from "./Btn.module.css";
 
 type BtnProps = {
     text: string;
@@ -11,6 +12,6 @@ const Btn: FC<BtnProps> = (props) => {
         <div className={styles.btn_wrapper}>
             <a className={styles.btn} href={props.url}>{props.text}</a>
         </div>
-    )
-}
+    );
+};
 export default Btn;

@@ -1,5 +1,6 @@
-import { NextPage } from "next"
-import styles from '../styles/Home.module.css'
+import React from "react";
+import { NextPage } from "next";
+import styles from "../styles/Home.module.css";
 import Form from "../components/Form/Form";
 
 const Contact: NextPage = () => {
@@ -14,7 +15,7 @@ const Contact: NextPage = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;

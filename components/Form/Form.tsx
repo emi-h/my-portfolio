@@ -1,19 +1,20 @@
-import { Textarea, TextInput } from "@mantine/core"
+import React from "react";
+import { Textarea, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import Btn from "../Btn/Btn";
-import styles from './Form.module.css'
+import styles from "./Form.module.css";
 
 
 const Form = () => {
       const form = useForm({
             initialValues: {
-                  email: '',
-                  name: '',
-                  message: ''
+                  email: "",
+                  name: "",
+                  message: ""
             },
 
             validate: {
-                  email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+                  email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
             },
       });
       return (
@@ -24,11 +25,11 @@ const Form = () => {
                                     <TextInput
                                           label="Email"
                                           placeholder="your@email.com"
-                                          {...form.getInputProps('email')}
+                                          {...form.getInputProps("email")}
                                     />
                               </div>
                               <div>
-                                    <TextInput label="Name" placeholder="Taro yamada" {...form.getInputProps('name')} />
+                                    <TextInput label="Name" placeholder="Taro yamada" {...form.getInputProps("name")} />
                               </div>
                               <div>
                                     <Textarea
@@ -40,7 +41,7 @@ const Form = () => {
                         </form>
                   </div >
             </>
-      )
-}
+      );
+};
 
 export default Form;

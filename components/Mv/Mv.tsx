@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from './Mv.module.css'
-import iconTW from '../../public/i_twitter.svg'
-import iconFB from '../../public/i_fb.svg'
-import iconLines from '../../public/i_lines.svg'
-import { FC } from 'react'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./Mv.module.css";
+import iconTW from "../../public/i_twitter.svg";
+import iconFB from "../../public/i_fb.svg";
+import iconLines from "../../public/i_lines.svg";
+import { FC } from "react";
 
 const Mv: FC = () => {
     return (
@@ -49,6 +50,6 @@ const Mv: FC = () => {
                 </div>
             </div >
         </div>
-    )
-}
+    );
+};
 export default Mv;

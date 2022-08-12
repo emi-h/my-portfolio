@@ -1,6 +1,7 @@
-import AboutContent from '../components/AboutContent/AboutContent'
-import styles from '../styles/Home.module.css'
-import { NextPage } from "next"
+import React from "react";
+import AboutContent from "../components/AboutContent/AboutContent";
+import styles from "../styles/Home.module.css";
+import { NextPage } from "next";
 
 const About: NextPage = () => {
     return (
@@ -14,7 +15,7 @@ const About: NextPage = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default About
+export default About;

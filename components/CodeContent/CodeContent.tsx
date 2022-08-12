@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import styles from './CodeContent.module.css'
-import StarImg from '../../public/i_star.svg'
-import BranchImg from '../../public/i_forkshape.svg'
-import Btn from '../Btn/Btn'
-import Link from 'next/link'
-import { FC } from 'react'
+import React from "react";
+import Image from "next/image";
+import styles from "./CodeContent.module.css";
+import StarImg from "../../public/i_star.svg";
+import BranchImg from "../../public/i_forkshape.svg";
+import Btn from "../Btn/Btn";
+import Link from "next/link";
+import { FC } from "react";
 
 const CodeContent: FC = () => {
     return (
@@ -216,7 +217,7 @@ const CodeContent: FC = () => {
                 <Btn text="View on GitHub" url='https://github.com/emi-h' />
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default CodeContent;

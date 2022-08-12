@@ -1,5 +1,6 @@
-import { FC } from 'react'
-import styles from './BlogDetailContent.module.css'
+import React from "react";
+import { FC } from "react";
+import styles from "./BlogDetailContent.module.css";
 
 const BlogDetailContent: FC = () => {
     return (
@@ -10,6 +11,6 @@ const BlogDetailContent: FC = () => {
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
             </div>
         </section>
-    )
-}
+    );
+};
 export default BlogDetailContent;

@@ -1,6 +1,7 @@
-import Link from 'next/link'
-import { FC } from 'react'
-import styles from './BlogContent.module.css'
+import React from "react";
+import Link from "next/link";
+import { FC } from "react";
+import styles from "./BlogContent.module.css";
 
 const BlogContent: FC = () => {
     return (
@@ -51,6 +52,6 @@ const BlogContent: FC = () => {
                 </Link>
             </li>
         </ul>
-    )
-}
+    );
+};
 export default BlogContent;

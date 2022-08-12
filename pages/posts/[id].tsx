@@ -1,6 +1,7 @@
-import { NextPage } from "next"
-import BlogDetailContent from "../../components/BlogDetailContent/BlogDetailContent"
-import styles from '../../styles/Home.module.css'
+import React from "react";
+import { NextPage } from "next";
+import BlogDetailContent from "../../components/BlogDetailContent/BlogDetailContent";
+import styles from "../../styles/Home.module.css";
 
 const Post: NextPage = () => {
     return (
@@ -13,7 +14,7 @@ const Post: NextPage = () => {
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
 
-export default Post
+export default Post;
