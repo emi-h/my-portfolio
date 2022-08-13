@@ -1,6 +1,6 @@
 import React from "react";
-import { BlogContent } from "../components/BlogContent/BlogContent";
-import styles from "../styles/Home.module.css";
+import { BlogContent } from "src/components/BlogContent/BlogContent";
+import styles from "src/styles/Home.module.css";
 import { NextPage } from "next";
 import Head from "next/head";
 

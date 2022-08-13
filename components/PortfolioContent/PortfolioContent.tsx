@@ -1,10 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Image from "next/image";
 import { FC } from "react";
-import ThumbnailImg from "../../public/test_thumbnail.jpg";
-import ThumbnailImg2 from "../../public/test_thumbnail2.jpg";
-import styles from "./Portfolio.module.css";
+import ThumbnailImg from "public/test_thumbnail.jpg";
+import ThumbnailImg2 from "public/test_thumbnail2.jpg";
+import styles from "./PortfolioContent.module.css";
 import Link from "next/link";
 
 export const PortfolioContent: FC = () => {

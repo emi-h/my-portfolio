@@ -1,7 +1,7 @@
 import React from "react";
 import { NextPage } from "next";
-import { PortfolioContent } from "../components/PortfolioContent/PortfolioContent";
-import styles from "../styles/Home.module.css";
+import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
+import styles from "src/styles/Home.module.css";
 import Head from "next/head";
 
 const Portfolio: NextPage = () => {

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./Mv.module.css";
-import iconTW from "../../public/i_twitter.svg";
-import iconFB from "../../public/i_fb.svg";
-import iconLines from "../../public/i_lines.svg";
+import styles from "src/components/Mv/Mv.module.css";
+import iconTW from "public/i_twitter.svg";
+import iconFB from "public/i_fb.svg";
+import iconLines from "public/i_lines.svg";
 import { FC } from "react";
 
 export const Mv: FC = () => {

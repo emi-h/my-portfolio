@@ -1,8 +1,8 @@
 import React from "react";
 import { FC } from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
-import styles from "./Twitter.module.css";
-import { Btn } from "../Btn/Btn";
+import styles from "src/components/Twitter/Twitter.module.css";
+import { Btn } from "src/components/Btn/Btn";
 
 export const Twitter: FC = () => {
   return (

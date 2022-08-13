@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import {
   ActionIcon,
@@ -7,7 +6,7 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import { FC, useState } from "react";
-import styles from "./Header.module.css";
+import styles from "src/components/Header/Header.module.css";
 import Link from "next/link";
 import { IconSun, IconMoonStars } from "@tabler/icons";
 

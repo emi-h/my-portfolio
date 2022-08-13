@@ -1,10 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Image from "next/image";
-import styles from "./CodeContent.module.css";
-import StarImg from "../../public/i_star.svg";
-import BranchImg from "../../public/i_forkshape.svg";
-import { Btn } from "../Btn/Btn";
+import styles from "src/components/CodeContent/CodeContent.module.css";
+import StarImg from "public/i_star.svg";
+import BranchImg from "public/i_forkshape.svg";
+import { Btn } from "src/components/Btn/Btn";
 import Link from "next/link";
 import { FC } from "react";
 
