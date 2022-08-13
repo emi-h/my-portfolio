@@ -13,8 +13,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Emi H</title>
-        <meta name="description" content="Emi H portfolio" />
+        <title>Emi H | Top</title>
+        <meta name="description" content="Emi H portfolio top page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
