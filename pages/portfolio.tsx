@@ -1,6 +1,6 @@
 import React from "react";
 import { NextPage } from "next";
-import PortfolioContent from "../components/PortfolioContent/PortfolioContent";
+import { PortfolioContent } from "../components/PortfolioContent/PortfolioContent";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 

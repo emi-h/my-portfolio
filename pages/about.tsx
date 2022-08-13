@@ -1,5 +1,5 @@
 import React from "react";
-import AboutContent from "../components/AboutContent/AboutContent";
+import { AboutContent } from "../components/AboutContent/AboutContent";
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import Head from "next/head";

@@ -1,20 +1,20 @@
 import React from "react";
 import { NextPage } from "next";
-import BlogDetailContent from "../../components/BlogDetailContent/BlogDetailContent";
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
+import { PortfolioDetailContent } from "../../components/PortfolioDetailContent/PortfolioDetailContent";
 
 const Post: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Emi H | Blogtitle</title>
-        <meta name="description" content="Emi H's blog detail" />
+        <title>Emi H | PortFolio title</title>
+        <meta name="description" content="Emi H's portfolio detail" />
       </Head>
       <section>
         <div className={styles.content}>
           <div className={styles.content_inner}>
-            <BlogDetailContent />
+            <PortfolioDetailContent />
           </div>
         </div>
       </section>
