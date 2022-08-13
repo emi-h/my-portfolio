@@ -1,0 +1,90 @@
+.header{
+  min-height:65px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header_inner{
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navArea{
+  display: flex;
+}
+.logo{
+  font-size: 18px;
+  font-weight: 700;
+}
+.nav{
+  display: flex;
+}
+
+.nav ul{
+  display: flex;
+}
+.nav ul li a{
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 0 8px;
+}
+.btn_toggle{
+  margin-left: 8px;
+}
+@media (max-width: 576px){
+  .header_inner{
+    padding-left: 44px;
+  }
+  .logo{
+    margin: 0 auto;
+  }
+  .nav{
+    width: 100%;
+    height: 100%;
+    background-color: #E64980;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 70px 23px;
+    z-index: 9;
+    display: none;
+    opacity: 0;
+  }
+  .nav.open{
+    display: block;
+    animation: fadeinAnime .3s forwards;
+  }
+  .nav ul{
+    flex-direction: column;
+  }
+  .nav ul li{
+    margin-bottom: 16px;
+  }
+  .nav ul li a{
+    font-size: 28px;
+    color: #fff;
+    padding: 0;
+  }
+  .btnBurger{
+    position: absolute;
+    left: 16px;
+    z-index: 99;
+  }
+  .btnBurger.fixed{
+    position: fixed;
+  }
+}
+
+/* animation */
+@keyframes fadeinAnime {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}

@@ -1,0 +1,12 @@
+.btn_wrapper{
+  text-align: center;
+}
+.btn{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 10px 22px;
+  border-radius: 32px;
+}
