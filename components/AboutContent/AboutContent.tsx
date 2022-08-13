@@ -1,6 +1,6 @@
 import React from "react";
 import { FC } from "react";
-import styles from "./AboutContent.module.css";
+import styles from "src/components/AboutContent/AboutContent.module.css";
 
 export const AboutContent: FC = () => {
   return (

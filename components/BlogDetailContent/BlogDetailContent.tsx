@@ -1,6 +1,6 @@
 import React from "react";
 import { FC } from "react";
-import styles from "./BlogDetailContent.module.css";
+import styles from "src/components/BlogDetailContent/BlogDetailContent.module.css";
 
 export const BlogDetailContent: FC = () => {
   return (

@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { FC } from "react";
-import styles from "./BlogContent.module.css";
+import styles from "src/components/BlogContent/BlogContent.module.css";
 
 export const BlogContent: FC = () => {
   return (
