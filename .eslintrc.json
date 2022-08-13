@@ -17,7 +17,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-undef": "error"
+    "no-undef": "error",
+    "jsx-a11y/anchor-is-valid": ["off"]
   },
   "settings": {
     "react": {
