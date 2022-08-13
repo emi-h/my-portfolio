@@ -15,7 +15,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Emi H | Top</title>
         <meta name="description" content="Emi H portfolio top page" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Mv />

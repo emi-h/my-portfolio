@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/globals.css";
+import "src/styles/globals.css";
 import type { AppProps } from "next/app";
 import {
   ColorScheme,
@@ -8,6 +8,7 @@ import {
 } from "@mantine/core";
 import { useState } from "react";
 import { Layout } from "src/components/Layout/Layout";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -16,6 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
