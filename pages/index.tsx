@@ -10,7 +10,6 @@ import CodeContent from "../components/CodeContent/CodeContent";
 import Btn from "../components/Btn/Btn";
 
 const Home: NextPage = () => {
-
   return (
     <>
       <Head>
@@ -26,14 +25,14 @@ const Home: NextPage = () => {
             <h2>blog</h2>
             <div className={styles.blog_body}>
               <BlogContent />
-              <Btn text="view all" url='/blog' />
+              <Btn text="view all" url="/blog" />
             </div>
           </section>
           <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
             <div className={styles.portfolio_body}>
               <PortfolioContent />
-              <Btn text="view all" url='/portfolio' />
+              <Btn text="view all" url="/portfolio" />
             </div>
           </section>
           <div className={styles.wrapper_gitTw}>

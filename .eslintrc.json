@@ -1,8 +1,11 @@
 {
   "extends": [
+    "eslint:recommended",
     "next/core-web-vitals",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
   "env": {
     "browser": true,
@@ -14,14 +17,6 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": [
-      "warn",
-      "always"
-    ],
-    "quotes": [
-      "warn",
-      "double"
-    ],
     "no-undef": "error"
   },
   "settings": {
