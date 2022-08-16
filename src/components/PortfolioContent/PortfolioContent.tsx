@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { FC } from "react";
-import ThumbnailImg from "../../../public/test_thumbnail.jpg";
-import ThumbnailImg2 from "../../../public/test_thumbnail2.jpg";
-import styles from "./Portfolio.module.css";
+import ThumbnailImg from "public/test_thumbnail.jpg";
+import ThumbnailImg2 from "public/test_thumbnail2.jpg";
+import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
 import Link from "next/link";
 
 export const PortfolioContent: FC = () => {
