@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { FC } from "react";
 import ThumbnailImg from "public/test_thumbnail.jpg";
-import styles from "PortfolioDetailContent.module.css";
+import styles from "src/components/PortfolioDetailContent/PortfolioDetailContent.module.css";
 
 export const PortfolioDetailContent: FC = () => {
   return (
