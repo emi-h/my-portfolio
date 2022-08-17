@@ -1,8 +1,9 @@
 import React from "react";
-import { BlogContent } from "src/components/BlogContent/BlogContent";
-import styles from "src/styles/Home.module.css";
-import { NextPage } from "next";
 import Head from "next/head";
+import { Loader } from "@mantine/core";
+import { BlogContent } from "src/components/BlogContent/BlogContent";
+import { NextPage } from "next";
+import styles from "src/styles/Home.module.css";
 
 const Blog: NextPage = () => {
   return (
@@ -17,6 +18,9 @@ const Blog: NextPage = () => {
             <h2>blog</h2>
             <div className={styles.blog_body}>
               <BlogContent />
+            </div>
+            <div className={styles.center}>
+              <Loader color="pink" />
             </div>
           </section>
         </div>
