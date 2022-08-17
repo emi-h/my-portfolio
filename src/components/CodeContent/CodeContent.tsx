@@ -1,11 +1,12 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-import styles from "src/components/CodeContent/CodeContent.module.css";
 import StarImg from "public/i_star.svg";
 import BranchImg from "public/i_forkshape.svg";
+import { Progress } from "@mantine/core";
 import { Btn } from "src/components/Btn/Btn";
-import Link from "next/link";
 import { FC } from "react";
+import styles from "src/components/CodeContent/CodeContent.module.css";
 
 export const CodeContent: FC = () => {
   return (
@@ -33,13 +34,13 @@ export const CodeContent: FC = () => {
                   </div>
                 </div>
                 <div className={styles.langArea}>
-                  <div className={styles.langBar}>
-                    <span className={styles.langBar_inner}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
+                  <Progress
+                    sections={[
+                      { value: 65.5, color: "#3178C6" },
+                      { value: 33.7, color: "#F1E05A" },
+                      { value: 0.8, color: "#EDEDED" },
+                    ]}
+                  />
                   <div className={styles.langText}>
                     <span className={styles.lang}>
                       <span>TypeScript</span>
@@ -78,13 +79,13 @@ export const CodeContent: FC = () => {
                   </div>
                 </div>
                 <div className={styles.langArea}>
-                  <div className={styles.langBar}>
-                    <span className={styles.langBar_inner}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
+                  <Progress
+                    sections={[
+                      { value: 65.5, color: "#3178C6" },
+                      { value: 33.7, color: "#F1E05A" },
+                      { value: 0.8, color: "#EDEDED" },
+                    ]}
+                  />
                   <div className={styles.langText}>
                     <span className={styles.lang}>
                       <span>TypeScript</span>
@@ -123,13 +124,13 @@ export const CodeContent: FC = () => {
                   </div>
                 </div>
                 <div className={styles.langArea}>
-                  <div className={styles.langBar}>
-                    <span className={styles.langBar_inner}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
+                  <Progress
+                    sections={[
+                      { value: 65.5, color: "#3178C6" },
+                      { value: 33.7, color: "#F1E05A" },
+                      { value: 0.8, color: "#EDEDED" },
+                    ]}
+                  />
                   <div className={styles.langText}>
                     <span className={styles.lang}>
                       <span>TypeScript</span>
@@ -168,13 +169,13 @@ export const CodeContent: FC = () => {
                   </div>
                 </div>
                 <div className={styles.langArea}>
-                  <div className={styles.langBar}>
-                    <span className={styles.langBar_inner}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
+                  <Progress
+                    sections={[
+                      { value: 65.5, color: "#3178C6" },
+                      { value: 33.7, color: "#F1E05A" },
+                      { value: 0.8, color: "#EDEDED" },
+                    ]}
+                  />
                   <div className={styles.langText}>
                     <span className={styles.lang}>
                       <span>TypeScript</span>
@@ -213,13 +214,13 @@ export const CodeContent: FC = () => {
                   </div>
                 </div>
                 <div className={styles.langArea}>
-                  <div className={styles.langBar}>
-                    <span className={styles.langBar_inner}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
+                  <Progress
+                    sections={[
+                      { value: 65.5, color: "#3178C6" },
+                      { value: 33.7, color: "#F1E05A" },
+                      { value: 0.8, color: "#EDEDED" },
+                    ]}
+                  />
                   <div className={styles.langText}>
                     <span className={styles.lang}>
                       <span>TypeScript</span>
