@@ -1,3 +1,26 @@
-.twitter_box{
+.twitter_box {
   margin-bottom: 70px;
+}
+.twitter_list li {
+  margin-bottom: 56px;
+}
+.tweet_inner {
+  display: flex;
+}
+.tweet_head {
+  display: flex;
+  align-items: center;
+}
+.tweet_body {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+.tweet_name01 {
+  font-weight: 700;
+}
+.tweet_name02 {
+  color: #909296;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 8px;
 }
