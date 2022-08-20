@@ -6,9 +6,10 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import { FC, useState } from "react";
+import { IconSun, IconMoonStars } from "@tabler/icons";
+import { navList } from "src/components/Header/navList";
 import styles from "./Header.module.css";
 import Link from "next/link";
-import { IconSun, IconMoonStars } from "@tabler/icons";
 
 export const Header: FC = () => {
   const [opened, setOpened] = useState(false);
@@ -42,26 +43,13 @@ export const Header: FC = () => {
         <div className={styles.navArea}>
           <nav className={`${styles.nav} ${navOpenStyle}`}>
             <ul>
-              <li>
-                <Link href="/about">
-                  <a>about</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a>blog</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio">
-                  <a>portfolio</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a>contact</a>
-                </Link>
-              </li>
+              {navList.map((navItem, i) => (
+                <li key={i}>
+                  <Link href={navItem.href}>
+                    <a>{navItem.title}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div className={styles.btn_toggle}>
