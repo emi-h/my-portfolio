@@ -20,6 +20,9 @@ export const Header: FC = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
+  const handleNavClose = () => {
+    setOpened((opened) => !opened);
+  };
   return (
     <header className={styles.header}>
       <div className={styles.header_inner}>
@@ -46,7 +49,7 @@ export const Header: FC = () => {
               {navList.map((navItem, i) => (
                 <li key={i}>
                   <Link href={navItem.href}>
-                    <a>{navItem.title}</a>
+                    <a onClick={handleNavClose}>{navItem.title}</a>
                   </Link>
                 </li>
               ))}
