@@ -5,11 +5,12 @@ import styles from "src/components/BlogContent/BlogContent.module.css";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const BlogContent: FC<any> = ({ props }) => {
-  console.log(props);
+  const blog_data = props.blog_data;
+  // console.log(blog_data);
   return (
     <ul className={styles.list}>
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any*/}
-      {props.contents?.map((content: any) => {
+      {blog_data.contents?.map((content: any) => {
         return (
           <li key={content.id}>
             <Link href={`/blog/${content.id}`}>

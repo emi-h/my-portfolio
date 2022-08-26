@@ -13,15 +13,25 @@ import { Btn } from "src/components/Btn/Btn";
 import { Blog } from "src/type/type";
 
 type Props = MicroCMSListResponse<Blog>;
-// ブログ情報を取得
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const data = await client.getList<Blog>({
+
+export const getStaticProps: GetStaticProps = async () => {
+  // ブログ情報取得
+  const blog_data = await client.getList<Blog>({
     endpoint: "blog",
     // 取得記事数5個に制限
     queries: { limit: 5 },
   });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const portfolio_data = await client.getList<any>({
+    endpoint: "portfolio",
+    queries: { limit: 6 },
+  });
+
   return {
-    props: data,
+    props: {
+      blog_data: blog_data,
+      portfolio_data: portfolio_data,
+    },
   };
 };
 
@@ -46,7 +56,7 @@ const Home: NextPage<Props> = (props) => {
           <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
             <div className={styles.portfolio_body}>
-              <PortfolioContent />
+              <PortfolioContent props={props} />
               <Btn text="view all" url="/portfolio" />
             </div>
           </section>
