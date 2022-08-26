@@ -1,6 +1,8 @@
 import React from "react";
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
+import { client } from "src/libs/client";
+import { MicroCMSListResponse } from "microcms-js-sdk";
 import styles from "src/styles/Home.module.css";
 import { Mv } from "src/components/Mv/Mv";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
@@ -8,8 +10,18 @@ import { PortfolioContent } from "src/components/PortfolioContent/PortfolioConte
 import { Twitter } from "src/components/Twitter/Twitter";
 import { CodeContent } from "src/components/CodeContent/CodeContent";
 import { Btn } from "src/components/Btn/Btn";
+import { Blog } from "src/type/type";
 
-const Home: NextPage = () => {
+type Props = MicroCMSListResponse<Blog>;
+// ブログ情報を取得
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data = await client.getList<Blog>({ endpoint: "blog" });
+  return {
+    props: data,
+  };
+};
+
+const Home: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
@@ -23,7 +35,7 @@ const Home: NextPage = () => {
           <section className={styles.blog} id="blog">
             <h2>blog</h2>
             <div className={styles.blog_body}>
-              <BlogContent />
+              <BlogContent props={props} />
               <Btn text="view all" url="/blog" />
             </div>
           </section>

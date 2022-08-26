@@ -1,9 +1,15 @@
-.blogDetail p{
+.blogDetail h1 {
+  margin-bottom: 1.5em;
+}
+.blogDetail h2 {
+  margin: 1em 0;
+}
+.blogDetail p {
   font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
 }
-.blogDetail time{
+.blogDetail time {
   font-size: 12px;
   font-weight: 700;
   color: #909296;

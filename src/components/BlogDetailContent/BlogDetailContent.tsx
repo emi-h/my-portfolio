@@ -1,17 +1,15 @@
 import React from "react";
 import { FC } from "react";
+// import { Blog } from "src/type/type";
 import styles from "./BlogDetailContent.module.css";
 
-export const BlogDetailContent: FC = () => {
+export const BlogDetailContent: FC<any> = (props) => {
   return (
     <section className={styles.blogDetail} id="blog">
-      <h2>This is a header</h2>
+      <time dateTime={props.props.date}>{props.props.date}</time>
+      <h1>{props.props.title}</h1>
       <div className={styles.blogDetail_body}>
-        <time dateTime="2022.07.11">2022.07.11</time>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit.{" "}
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: props.props.content }}></div>
       </div>
     </section>
   );

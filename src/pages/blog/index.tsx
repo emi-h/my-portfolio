@@ -2,10 +2,22 @@ import React from "react";
 import Head from "next/head";
 import { Loader } from "@mantine/core";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import styles from "src/styles/Home.module.css";
+import { MicroCMSListResponse } from "microcms-js-sdk";
+import { client } from "src/libs/client";
+import { Blog } from "src/type/type";
 
-const Blog: NextPage = () => {
+type Props = MicroCMSListResponse<Blog>;
+// ブログ情報を取得
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data = await client.getList<Blog>({ endpoint: "blog" });
+  return {
+    props: data,
+  };
+};
+
+const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
   return (
     <>
       <Head>
@@ -17,7 +29,7 @@ const Blog: NextPage = () => {
           <section className={styles.blog} id="blog">
             <h2>blog</h2>
             <div className={styles.blog_body}>
-              <BlogContent />
+              <BlogContent props={props} />
             </div>
             <div className={styles.center}>
               <Loader color="pink" />
