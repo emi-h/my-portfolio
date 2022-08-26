@@ -15,7 +15,11 @@ import { Blog } from "src/type/type";
 type Props = MicroCMSListResponse<Blog>;
 // ブログ情報を取得
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const data = await client.getList<Blog>({ endpoint: "blog" });
+  const data = await client.getList<Blog>({
+    endpoint: "blog",
+    // 取得記事数5個に制限
+    queries: { limit: 5 },
+  });
   return {
     props: data,
   };
