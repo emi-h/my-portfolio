@@ -10,19 +10,17 @@ import { PortfolioContent } from "src/components/PortfolioContent/PortfolioConte
 import { Twitter } from "src/components/Twitter/Twitter";
 import { CodeContent } from "src/components/CodeContent/CodeContent";
 import { Btn } from "src/components/Btn/Btn";
-import { Blog } from "src/type/type";
-
-type Props = MicroCMSListResponse<Blog>;
+import { Blog, Portfolio } from "src/type/type";
 
 export const getStaticProps: GetStaticProps = async () => {
   // ブログ情報取得
-  const blog_data = await client.getList<Blog>({
+  const blog_data = await client.getList({
     endpoint: "blog",
-    // 取得記事数5個に制限
     queries: { limit: 5 },
   });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const portfolio_data = await client.getList<any>({
+
+  // ポートフォリオ情報取得
+  const portfolio_data = await client.getList({
     endpoint: "portfolio",
     queries: { limit: 6 },
   });
@@ -35,7 +33,10 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home: NextPage<Props> = (props) => {
+const Home: NextPage<{
+  blog_data: MicroCMSListResponse<Blog[]>;
+  portfolio_data: MicroCMSListResponse<Portfolio[]>;
+}> = ({ blog_data, portfolio_data }) => {
   return (
     <>
       <Head>
@@ -49,14 +50,14 @@ const Home: NextPage<Props> = (props) => {
           <section className={styles.blog} id="blog">
             <h2>blog</h2>
             <div className={styles.blog_body}>
-              <BlogContent props={props} />
+              <BlogContent props={blog_data} />
               <Btn text="view all" url="/blog" />
             </div>
           </section>
           <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
             <div className={styles.portfolio_body}>
-              <PortfolioContent props={props} />
+              <PortfolioContent props={portfolio_data} />
               <Btn text="view all" url="/portfolio" />
             </div>
           </section>

@@ -1,10 +1,17 @@
 import React from "react";
-import { NextPage } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
 import { PortfolioDetailContent } from "../../components/PortfolioDetailContent/PortfolioDetailContent";
+import { client } from "src/libs/client";
+import { Portfolio } from "src/type/type";
+import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 
-const Post: NextPage = () => {
+type Props = Portfolio & MicroCMSContentId & MicroCMSDate;
+
+const Post: NextPage<Props> = (props) => {
+  console.log("props", props);
+
   return (
     <>
       <Head>
@@ -14,12 +21,40 @@ const Post: NextPage = () => {
       <section>
         <div className={styles.content}>
           <div className={styles.content_inner}>
-            <PortfolioDetailContent />
+            <PortfolioDetailContent props={props} />
           </div>
         </div>
       </section>
     </>
   );
+};
+
+export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
+  const data = await client.getList({ endpoint: "portfolio" });
+  const ids = data.contents.map((content) => `/portfolio/${content.id}`);
+  return {
+    paths: ids,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props, { id: string }> = async (
+  ctx
+) => {
+  if (!ctx.params) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const data = await client.getListDetail<Portfolio>({
+    endpoint: "portfolio",
+    contentId: ctx.params.id,
+  });
+
+  return {
+    props: data,
+  };
 };
 
 export default Post;

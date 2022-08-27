@@ -4,20 +4,15 @@ import { FC } from "react";
 import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
 import Link from "next/link";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const PortfolioContent: FC<any> = ({ props }) => {
-  const portfolio_data = props.portfolio_data;
-  // console.log(portfolio_data.contents[0]);
+export const PortfolioContent: FC<any> = (props) => {
+  const portfolio_data = props.props.contents;
   return (
     <ul className={styles.list}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any*/}
-      {portfolio_data.contents?.map((data: any) => {
-        // console.log(data.imgUrl.url);
+      {portfolio_data.map((data: any) => {
         const thum = data.imgUrl.url;
-        // console.log(thum);
         return (
           <li key={data.id}>
-            <Link href="/portfolio/id">
+            <Link href={`/portfolio/${data.id}`}>
               <a className={styles.portfolioCard}>
                 <figure>
                   <Image

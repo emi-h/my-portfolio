@@ -1,10 +1,23 @@
 import React from "react";
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
 import styles from "src/styles/Home.module.css";
 import Head from "next/head";
+import { Portfolio } from "src/type/type";
+import { MicroCMSListResponse } from "microcms-js-sdk";
+import { client } from "src/libs/client";
 
-const Portfolio: NextPage = () => {
+type Props = MicroCMSListResponse<Portfolio>;
+
+// ブログ情報を取得
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data = await client.getList<Portfolio>({ endpoint: "portfolio" });
+  return {
+    props: data,
+  };
+};
+
+const Portfolio: NextPage = (props) => {
   return (
     <>
       <Head>
@@ -16,7 +29,7 @@ const Portfolio: NextPage = () => {
           <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
             <div className={styles.portfolio_body}>
-              <PortfolioContent />
+              <PortfolioContent props={props} />
             </div>
           </section>
         </div>

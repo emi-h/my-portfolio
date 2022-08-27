@@ -9,6 +9,7 @@ import { client } from "src/libs/client";
 import { Blog } from "src/type/type";
 
 type Props = MicroCMSListResponse<Blog>;
+
 // ブログ情報を取得
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const data = await client.getList<Blog>({ endpoint: "blog" });
@@ -17,7 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
+const Blog: NextPage = (props) => {
   return (
     <>
       <Head>

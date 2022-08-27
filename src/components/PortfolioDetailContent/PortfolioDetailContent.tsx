@@ -1,26 +1,20 @@
 import Image from "next/image";
 import React from "react";
 import { FC } from "react";
-import ThumbnailImg from "public/test_thumbnail.jpg";
 import styles from "src/components/PortfolioDetailContent/PortfolioDetailContent.module.css";
 
-export const PortfolioDetailContent: FC = () => {
+export const PortfolioDetailContent: FC<any> = (props) => {
+  const portfolio_data = props.props;
+  const thum = portfolio_data.imgUrl.url;
   return (
     <section className={styles.PortfolioDetailContent} id="blog">
-      <h2>IT KINGDOM</h2>
+      <h2>{portfolio_data.title}</h2>
       <div className={styles.PortfolioDetailContent_body}>
         <figure>
-          <Image
-            src={ThumbnailImg}
-            alt="thumbnail"
-            layout="fill"
-            objectFit="cover"
-          />
+          <Image src={thum} alt="thumbnail" layout="fill" objectFit="cover" />
         </figure>
-        <time dateTime="2021.10 - 2021.12">2021.10 - 2021.12</time>
-        <p>
-          当サロンのLPページ。React、Next.js、TypeScriptなどのモダンな技術を用いて作られています。初心者にちょうど良い難易度の制作物です。
-        </p>
+        <div>{portfolio_data.text}</div>
+        <time dateTime={portfolio_data.date}>{portfolio_data.date}</time>
       </div>
     </section>
   );
