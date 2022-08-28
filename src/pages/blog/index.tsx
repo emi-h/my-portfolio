@@ -18,11 +18,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Blog: NextPage = (props) => {
+const Blog: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>Emi H | Blog</title>
+        <title>Emi H | Blog一覧</title>
         <meta name="description" content="Emi H's blog" />
       </Head>
       <div className={styles.content}>
@@ -30,7 +30,7 @@ const Blog: NextPage = (props) => {
           <section className={styles.blog} id="blog">
             <h2>blog</h2>
             <div className={styles.blog_body}>
-              <BlogContent props={props} />
+              <BlogContent blogArray={props.contents} />
             </div>
             <div className={styles.center}>
               <Loader color="pink" />

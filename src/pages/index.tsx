@@ -14,13 +14,13 @@ import { Blog, Portfolio } from "src/type/type";
 
 export const getStaticProps: GetStaticProps = async () => {
   // ブログ情報取得
-  const blog_data = await client.getList({
+  const blog_data = await client.getList<Blog>({
     endpoint: "blog",
     queries: { limit: 5 },
   });
 
   // ポートフォリオ情報取得
-  const portfolio_data = await client.getList({
+  const portfolio_data = await client.getList<Portfolio>({
     endpoint: "portfolio",
     queries: { limit: 6 },
   });
@@ -34,9 +34,10 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPage<{
-  blog_data: MicroCMSListResponse<Blog[]>;
-  portfolio_data: MicroCMSListResponse<Portfolio[]>;
+  blog_data: MicroCMSListResponse<Blog>;
+  portfolio_data: MicroCMSListResponse<Portfolio>;
 }> = ({ blog_data, portfolio_data }) => {
+  console.log("blog_data", blog_data);
   return (
     <>
       <Head>
@@ -50,7 +51,7 @@ const Home: NextPage<{
           <section className={styles.blog} id="blog">
             <h2>blog</h2>
             <div className={styles.blog_body}>
-              <BlogContent props={blog_data} />
+              <BlogContent blogArray={blog_data.contents} />
               <Btn text="view all" url="/blog" />
             </div>
           </section>
