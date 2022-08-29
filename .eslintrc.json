@@ -6,5 +6,9 @@
     "prettier"
   ],
   "root": true, // .eslintrc.jsがプロジェクトのルートに配置させているか（指定がないと上位階層へ設定ファイルを探索される）
-  "parser": "@typescript-eslint/parser" // ESLintにTypeScriptを理解させる
+  "parser": "@typescript-eslint/parser", // ESLintにTypeScriptを理解させる
+  "rules": {
+    // console.log をエラーにする
+    "no-console": ["error", { "allow": ["warn", "info", "error"] }]
+  }
 }
