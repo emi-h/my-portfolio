@@ -1,16 +1,18 @@
 import React from "react";
 import { FC } from "react";
-// import { Blog } from "src/type/type";
+
+import { Blog } from "src/type/type";
 import styles from "./BlogDetailContent.module.css";
 
-export const BlogDetailContent: FC<any> = (props) => {
-  const blog_data = props.props;
+export const BlogDetailContent: FC<{ blogData: Blog }> = ({ blogData }) => {
   return (
     <section className={styles.blogDetail} id="blog">
-      <time dateTime={blog_data.date}>{blog_data.date}</time>
-      <h1>{blog_data.title}</h1>
+      <time dateTime={new Date(blogData.date).toLocaleDateString("ko-KR")}>
+        {new Date(blogData.date).toLocaleDateString("ko-KR")}
+      </time>
+      <h1>{blogData.title}</h1>
       <div className={styles.blogDetail_body}>
-        <div dangerouslySetInnerHTML={{ __html: blog_data.content }}></div>
+        <div dangerouslySetInnerHTML={{ __html: blogData.content }}></div>
       </div>
     </section>
   );

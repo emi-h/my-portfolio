@@ -1,8 +1,10 @@
 import React from "react";
-import { AboutContent } from "src/components/AboutContent/AboutContent";
-import styles from "src/styles/Home.module.css";
-import { NextPage } from "next";
 import Head from "next/head";
+import { NextPage } from "next";
+
+import { AboutContent } from "src/components/AboutContent/AboutContent";
+
+import styles from "src/styles/Home.module.css";
 
 const About: NextPage = () => {
   return (

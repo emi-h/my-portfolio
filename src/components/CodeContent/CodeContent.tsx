@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import StarImg from "public/i_star.svg";
-import BranchImg from "public/i_forkshape.svg";
+import { FC } from "react";
+
 import { Progress } from "@mantine/core";
 import { Btn } from "src/components/Btn/Btn";
-import { FC } from "react";
+import StarImg from "public/i_star.svg";
+import BranchImg from "public/i_forkshape.svg";
+
 import styles from "src/components/CodeContent/CodeContent.module.css";
 
 export const CodeContent: FC = () => {

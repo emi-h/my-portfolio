@@ -4,7 +4,7 @@ import { useForm } from "@mantine/form";
 import { Btn } from "../Btn/Btn";
 import styles from "./Form.module.css";
 
-const Form = () => {
+export const Form = () => {
   const form = useForm({
     initialValues: {
       email: "",
@@ -19,6 +19,7 @@ const Form = () => {
   return (
     <>
       <div className={styles.formArea}>
+        {/* eslint-disable-next-line no-console*/}
         <form onSubmit={form.onSubmit((values) => console.log(values))}>
           <div>
             <TextInput
@@ -46,5 +47,3 @@ const Form = () => {
     </>
   );
 };
-
-export default Form;

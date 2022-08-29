@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Loader } from "@mantine/core";
+// import { Loader } from "@mantine/core";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
 import { GetStaticProps, NextPage } from "next";
 import styles from "src/styles/Home.module.css";
@@ -32,9 +32,10 @@ const Blog: NextPage<Props> = (props) => {
             <div className={styles.blog_body}>
               <BlogContent blogArray={props.contents} />
             </div>
-            <div className={styles.center}>
+            {/* ローディング */}
+            {/* <div className={styles.center}>
               <Loader color="pink" />
-            </div>
+            </div> */}
           </section>
         </div>
       </div>

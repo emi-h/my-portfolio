@@ -1,15 +1,17 @@
 import React from "react";
-import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import { client } from "src/libs/client";
+import type { NextPage, GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
-import styles from "src/styles/Home.module.css";
+import { client } from "src/libs/client";
+
 import { Mv } from "src/components/Mv/Mv";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
 import { Twitter } from "src/components/Twitter/Twitter";
 import { CodeContent } from "src/components/CodeContent/CodeContent";
 import { Btn } from "src/components/Btn/Btn";
+import styles from "src/styles/Home.module.css";
+
 import { Blog, Portfolio } from "src/type/type";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -37,7 +39,6 @@ const Home: NextPage<{
   blog_data: MicroCMSListResponse<Blog>;
   portfolio_data: MicroCMSListResponse<Portfolio>;
 }> = ({ blog_data, portfolio_data }) => {
-  console.log("blog_data", blog_data);
   return (
     <>
       <Head>
@@ -58,7 +59,7 @@ const Home: NextPage<{
           <section className={styles.portfolio} id="portfolio">
             <h2>portfolio</h2>
             <div className={styles.portfolio_body}>
-              <PortfolioContent props={portfolio_data} />
+              <PortfolioContent portfolioArray={portfolio_data.contents} />
               <Btn text="view all" url="/portfolio" />
             </div>
           </section>

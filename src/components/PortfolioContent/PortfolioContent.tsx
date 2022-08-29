@@ -1,14 +1,18 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { FC } from "react";
-import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
-import Link from "next/link";
 
-export const PortfolioContent: FC<any> = (props) => {
-  const portfolio_data = props.props.contents;
+import { Portfolio } from "src/type/type";
+
+import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
+
+export const PortfolioContent: FC<{ portfolioArray: Portfolio[] }> = ({
+  portfolioArray,
+}) => {
   return (
     <ul className={styles.list}>
-      {portfolio_data.map((data: any) => {
+      {portfolioArray.map((data) => {
         const thum = data.imgUrl.url;
         return (
           <li key={data.id}>
@@ -25,7 +29,11 @@ export const PortfolioContent: FC<any> = (props) => {
                 <div>
                   <h3>{data.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: data.text }}></div>
-                  <time dateTime="{data.date}">{data.date}</time>
+                  <time
+                    dateTime={new Date(data.date).toLocaleDateString("ko-KR")}
+                  >
+                    {new Date(data.date).toLocaleDateString("ko-KR")}
+                  </time>
                 </div>
               </a>
             </Link>
