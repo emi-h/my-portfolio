@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FC } from "react";
 
+import { Text } from "@mantine/core";
+
 import { Portfolio } from "src/type/type";
 
 import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
@@ -28,7 +30,9 @@ export const PortfolioContent: FC<{ portfolioArray: Portfolio[] }> = ({
                 </figure>
                 <div>
                   <h3>{data.title}</h3>
-                  <div dangerouslySetInnerHTML={{ __html: data.text }}></div>
+                  <Text lineClamp={4}>
+                    <div dangerouslySetInnerHTML={{ __html: data.text }}></div>
+                  </Text>
                   <time
                     dateTime={new Date(data.date).toLocaleDateString("ko-KR")}
                   >

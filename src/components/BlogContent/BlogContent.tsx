@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Text } from "@mantine/core";
 import { FC } from "react";
 import styles from "src/components/BlogContent/BlogContent.module.css";
 import { Blog } from "src/type/type";
@@ -13,7 +14,7 @@ export const BlogContent: FC<{ blogArray: Blog[] }> = ({ blogArray }) => {
             <Link href={`/blog/${content.id}`}>
               <a>
                 <h3>{content.title}</h3>
-                <p>{content.subtitle}</p>
+                <Text lineClamp={1}>{content.subtitle}</Text>
                 <time
                   dateTime={new Date(content.date).toLocaleDateString("ko-KR")}
                 >
