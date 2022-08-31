@@ -1,4 +1,5 @@
 {
+  "plugins": ["sort-keys-custom-order"],
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
@@ -9,6 +10,16 @@
   "parser": "@typescript-eslint/parser", // ESLintにTypeScriptを理解させる
   "rules": {
     // console.log をエラーにする
-    "no-console": ["error", { "allow": ["warn", "info", "error"] }]
+    "no-console": ["error", { "allow": ["warn", "info", "error"] }],
+    // For JS objects sorting
+    "sort-keys-custom-order/object-keys": [
+      "error",
+      { "orderedKeys": ["id", "name", "title"] }
+    ],
+    // For TS types sorting
+    "sort-keys-custom-order/type-keys": [
+      "error",
+      { "orderedKeys": ["id", "name", "title"] }
+    ]
   }
 }
