@@ -1,14 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import React from "react";
+import { PortfolioDetailContent } from "src/components/PortfolioDetailContent/PortfolioDetailContent";
 import { client } from "src/libs/client";
-import { PortfolioDetailContent } from "../../components/PortfolioDetailContent/PortfolioDetailContent";
-
+import styles from "src/styles/Home.module.css";
 import { Portfolio } from "src/type/type";
-
-import styles from "../../styles/Home.module.css";
 
 type Props = Portfolio & MicroCMSContentId & MicroCMSDate;
 
@@ -16,8 +13,8 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   const data = await client.getList({ endpoint: "portfolio" });
   const ids = data.contents.map((content) => `/portfolio/${content.id}`);
   return {
-    paths: ids,
     fallback: false,
+    paths: ids,
   };
 };
 
@@ -31,8 +28,8 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async (
   }
 
   const data = await client.getListDetail<Portfolio>({
-    endpoint: "portfolio",
     contentId: ctx.params.id,
+    endpoint: "portfolio",
   });
 
   return {

@@ -1,17 +1,15 @@
-import React from "react";
-import Head from "next/head";
-import type { NextPage, GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
-import { client } from "src/libs/client";
-
-import { Mv } from "src/components/Mv/Mv";
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import React from "react";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
+import { Btn } from "src/components/Btn/Btn";
+import { CodeContent } from "src/components/CodeContent/CodeContent";
+import { Mv } from "src/components/Mv/Mv";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
 import { Twitter } from "src/components/Twitter/Twitter";
-import { CodeContent } from "src/components/CodeContent/CodeContent";
-import { Btn } from "src/components/Btn/Btn";
+import { client } from "src/libs/client";
 import styles from "src/styles/Home.module.css";
-
 import { Blog, Portfolio } from "src/type/type";
 
 export const getStaticProps: GetStaticProps = async () => {

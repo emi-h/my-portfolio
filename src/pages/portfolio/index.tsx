@@ -1,14 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import { GetStaticProps, NextPage } from "next";
-
 import { MicroCMSListResponse } from "microcms-js-sdk";
-import { client } from "src/libs/client";
+import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import React from "react";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
-
-import { Portfolio } from "src/type/type";
-
+import { client } from "src/libs/client";
 import styles from "src/styles/Home.module.css";
+import { Portfolio } from "src/type/type";
 
 type Props = MicroCMSListResponse<Portfolio>;
 

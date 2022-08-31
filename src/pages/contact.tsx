@@ -1,9 +1,7 @@
-import React from "react";
-import Head from "next/head";
 import { NextPage } from "next";
-
+import Head from "next/head";
+import React from "react";
 import { Form } from "src/components/Form/Form";
-
 import styles from "src/styles/Home.module.css";
 
 const Contact: NextPage = () => {

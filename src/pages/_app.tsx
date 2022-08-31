@@ -1,16 +1,15 @@
-import React from "react";
-import Head from "next/head";
-import type { AppProps } from "next/app";
-import { useState } from "react";
+import "src/styles/globals.css";
 
 import {
   ColorScheme,
   ColorSchemeProvider,
   MantineProvider,
 } from "@mantine/core";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import React from "react";
+import { useState } from "react";
 import { Layout } from "src/components/Layout/Layout";
-
-import "src/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");

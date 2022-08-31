@@ -1,13 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import React from "react";
+import { BlogDetailContent } from "src/components/BlogDetailContent/BlogDetailContent";
 import { client } from "src/libs/client";
-import { BlogDetailContent } from "../../components/BlogDetailContent/BlogDetailContent";
-
+import styles from "src/styles/Home.module.css";
 import { Blog } from "src/type/type";
-import styles from "../../styles/Home.module.css";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -15,8 +13,8 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   const data = await client.getList({ endpoint: "blog" });
   const ids = data.contents.map((content) => `/blog/${content.id}`);
   return {
-    paths: ids,
     fallback: false,
+    paths: ids,
   };
 };
 
@@ -30,8 +28,8 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async (
   }
 
   const data = await client.getListDetail<Blog>({
-    endpoint: "blog",
     contentId: ctx.params.id,
+    endpoint: "blog",
   });
 
   return {

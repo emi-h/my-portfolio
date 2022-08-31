@@ -1,11 +1,11 @@
-import React from "react";
+import { MicroCMSListResponse } from "microcms-js-sdk";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import React from "react";
 // import { Loader } from "@mantine/core";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
-import { GetStaticProps, NextPage } from "next";
-import styles from "src/styles/Home.module.css";
-import { MicroCMSListResponse } from "microcms-js-sdk";
 import { client } from "src/libs/client";
+import styles from "src/styles/Home.module.css";
 import { Blog } from "src/type/type";
 
 type Props = MicroCMSListResponse<Blog>;
