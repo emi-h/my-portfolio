@@ -1,18 +1,18 @@
 export type Blog = {
+  id: string;
   title: string;
-  subtitle: string;
   content: string;
   date: string;
-  id: string;
   portfolio_img?: string;
+  subtitle: string;
 };
 
 export type Portfolio = {
+  id: string;
   title: string;
-  text: string;
+  date: string;
   imgUrl: {
     url: string;
   };
-  date: string;
-  id: string;
+  text: string;
 };

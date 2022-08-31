@@ -1,13 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FC } from "react";
-
 import { Progress } from "@mantine/core";
-import { Btn } from "src/components/Btn/Btn";
-import StarImg from "public/i_star.svg";
+import Image from "next/image";
+import Link from "next/link";
 import BranchImg from "public/i_forkshape.svg";
-
+import StarImg from "public/i_star.svg";
+import React from "react";
+import { FC } from "react";
+import { Btn } from "src/components/Btn/Btn";
 import styles from "src/components/CodeContent/CodeContent.module.css";
 
 export const CodeContent: FC = () => {
@@ -38,9 +36,9 @@ export const CodeContent: FC = () => {
                 <div className={styles.langArea}>
                   <Progress
                     sections={[
-                      { value: 65.5, color: "#3178C6" },
-                      { value: 33.7, color: "#F1E05A" },
-                      { value: 0.8, color: "#EDEDED" },
+                      { color: "#3178C6", value: 65.5 },
+                      { color: "#F1E05A", value: 33.7 },
+                      { color: "#EDEDED", value: 0.8 },
                     ]}
                   />
                   <div className={styles.langText}>
@@ -83,9 +81,9 @@ export const CodeContent: FC = () => {
                 <div className={styles.langArea}>
                   <Progress
                     sections={[
-                      { value: 65.5, color: "#3178C6" },
-                      { value: 33.7, color: "#F1E05A" },
-                      { value: 0.8, color: "#EDEDED" },
+                      { color: "#3178C6", value: 65.5 },
+                      { color: "#F1E05A", value: 33.7 },
+                      { color: "#EDEDED", value: 0.8 },
                     ]}
                   />
                   <div className={styles.langText}>
@@ -128,9 +126,9 @@ export const CodeContent: FC = () => {
                 <div className={styles.langArea}>
                   <Progress
                     sections={[
-                      { value: 65.5, color: "#3178C6" },
-                      { value: 33.7, color: "#F1E05A" },
-                      { value: 0.8, color: "#EDEDED" },
+                      { color: "#3178C6", value: 65.5 },
+                      { color: "#F1E05A", value: 33.7 },
+                      { color: "#EDEDED", value: 0.8 },
                     ]}
                   />
                   <div className={styles.langText}>
@@ -173,9 +171,9 @@ export const CodeContent: FC = () => {
                 <div className={styles.langArea}>
                   <Progress
                     sections={[
-                      { value: 65.5, color: "#3178C6" },
-                      { value: 33.7, color: "#F1E05A" },
-                      { value: 0.8, color: "#EDEDED" },
+                      { color: "#3178C6", value: 65.5 },
+                      { color: "#F1E05A", value: 33.7 },
+                      { color: "#EDEDED", value: 0.8 },
                     ]}
                   />
                   <div className={styles.langText}>
@@ -218,9 +216,9 @@ export const CodeContent: FC = () => {
                 <div className={styles.langArea}>
                   <Progress
                     sections={[
-                      { value: 65.5, color: "#3178C6" },
-                      { value: 33.7, color: "#F1E05A" },
-                      { value: 0.8, color: "#EDEDED" },
+                      { color: "#3178C6", value: 65.5 },
+                      { color: "#F1E05A", value: 33.7 },
+                      { color: "#EDEDED", value: 0.8 },
                     ]}
                   />
                   <div className={styles.langText}>

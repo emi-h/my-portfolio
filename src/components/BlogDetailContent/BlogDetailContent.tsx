@@ -1,7 +1,7 @@
 import React from "react";
 import { FC } from "react";
-
 import { Blog } from "src/type/type";
+
 import styles from "./BlogDetailContent.module.css";
 
 export const BlogDetailContent: FC<{ blogData: Blog }> = ({ blogData }) => {

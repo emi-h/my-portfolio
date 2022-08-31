@@ -1,9 +1,10 @@
+import { Avatar } from "@mantine/core";
+import Link from "next/link";
 import React from "react";
 import { FC } from "react";
+
 import { Btn } from "../Btn/Btn";
-import { Avatar } from "@mantine/core";
 import styles from "./Twitter.module.css";
-import Link from "next/link";
 
 export const Twitter: FC = () => {
   return (

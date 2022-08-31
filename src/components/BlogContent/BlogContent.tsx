@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import { Text } from "@mantine/core";
+import Link from "next/link";
+import React from "react";
 import { FC } from "react";
 import styles from "src/components/BlogContent/BlogContent.module.css";
 import { Blog } from "src/type/type";

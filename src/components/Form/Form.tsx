@@ -1,14 +1,15 @@
-import React from "react";
 import { Textarea, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
+import React from "react";
+
 import { Btn } from "../Btn/Btn";
 import styles from "./Form.module.css";
 
 export const Form = () => {
   const form = useForm({
     initialValues: {
-      email: "",
       name: "",
+      email: "",
       message: "",
     },
 

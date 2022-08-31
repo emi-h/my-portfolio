@@ -1,13 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FC } from "react";
-
 import { Text } from "@mantine/core";
-
-import { Portfolio } from "src/type/type";
-
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FC } from "react";
 import styles from "src/components/PortfolioContent/PortfolioContent.module.css";
+import { Portfolio } from "src/type/type";
 
 export const PortfolioContent: FC<{ portfolioArray: Portfolio[] }> = ({
   portfolioArray,

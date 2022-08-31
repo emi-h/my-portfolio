@@ -1,15 +1,16 @@
-import React from "react";
 import {
   ActionIcon,
   Burger,
   MediaQuery,
   useMantineColorScheme,
 } from "@mantine/core";
-import { FC, useState } from "react";
-import { IconSun, IconMoonStars } from "@tabler/icons";
-import { navList } from "src/components/Header/navList";
-import styles from "./Header.module.css";
+import { IconMoonStars, IconSun } from "@tabler/icons";
 import Link from "next/link";
+import React from "react";
+import { FC, useState } from "react";
+import { navList } from "src/components/Header/navList";
+
+import styles from "./Header.module.css";
 
 export const Header: FC = () => {
   const [opened, setOpened] = useState(false);

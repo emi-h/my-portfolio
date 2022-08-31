@@ -1,5 +1,6 @@
 import React from "react";
 import { FC } from "react";
+
 import styles from "./Btn.module.css";
 
 type BtnProps = {
