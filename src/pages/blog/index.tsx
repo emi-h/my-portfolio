@@ -31,11 +31,11 @@ const Blog: NextPage<Props> = (props) => {
             <h2>blog</h2>
             <div className={styles.blog_body}>
               <BlogContent blogArray={props.contents} />
-            </div>
-            {/* ローディング */}
-            {/* <div className={styles.center}>
+              {/* ローディング */}
+              {/* <div className={styles.center}>
               <Loader color="pink" />
             </div> */}
+            </div>
           </section>
         </div>
       </div>
