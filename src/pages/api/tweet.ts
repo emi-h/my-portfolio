@@ -9,6 +9,7 @@ import type {
 // ・テキスト情報だけでなく、リンクや画像も取得したい。
 // ・expansionしてuser.fieldsを一緒に取得したい。
 // ・ツイート詳細のリンクを取得・設置したい。
+// ・API取得エラー時どうするか。
 const handler = async (
   _req: NextApiRequest,
   res: NextApiResponse<{
