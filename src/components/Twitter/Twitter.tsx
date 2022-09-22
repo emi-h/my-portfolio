@@ -1,5 +1,6 @@
 import { Avatar } from "@mantine/core";
 import dayjs from "dayjs";
+import Link from "next/link";
 import React from "react";
 import { FC } from "react";
 import useSWR from "swr";
@@ -27,33 +28,34 @@ export const Twitter: FC = () => {
             {data?.tweets?.map((tweet) => {
               return (
                 <li key={tweet.id}>
-                  {/* リンクの取得は難しそう？ */}
-                  {/* <Link href="#">
-                    <a> */}
-                  <div className={styles.tweet_inner}>
-                    <div className={styles.tweet_icon}>
-                      <Avatar
-                        radius="xl"
-                        src={data.user?.profile_image_url}
-                        alt={data.user?.name}
-                      />
-                    </div>
-                    <div className={styles.tweet_body}>
-                      <div className={styles.tweet_head}>
-                        <span className={styles.tweet_name01}>
-                          {data?.user?.name}
-                        </span>
-                        <span className={styles.tweet_name02}>
-                          {`@${data?.user?.username}・${dayjs(
-                            tweet.created_at
-                          ).format("M月D日")}`}
-                        </span>
+                  <Link
+                    href={`https://twitter.com/uolYUd2kPpw3yRY/status/${tweet.id}`}
+                  >
+                    <a>
+                      <div className={styles.tweet_inner}>
+                        <div className={styles.tweet_icon}>
+                          <Avatar
+                            radius="xl"
+                            src={data.user?.profile_image_url}
+                            alt={data.user?.name}
+                          />
+                        </div>
+                        <div className={styles.tweet_body}>
+                          <div className={styles.tweet_head}>
+                            <span className={styles.tweet_name01}>
+                              {data?.user?.name}
+                            </span>
+                            <span className={styles.tweet_name02}>
+                              {`@${data?.user?.username}・${dayjs(
+                                tweet.created_at
+                              ).format("M月D日")}`}
+                            </span>
+                          </div>
+                          <p>{tweet.text}</p>
+                        </div>
                       </div>
-                      <p>{tweet.text}</p>
-                    </div>
-                  </div>
-                  {/* </a>
-                  </Link> */}
+                    </a>
+                  </Link>
                 </li>
               );
             })}
