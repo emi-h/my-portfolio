@@ -63,35 +63,6 @@ export const CodeContent: FC = () => {
   });
   console.log("languageArray", languageArray);
 
-  // console.log("languageArray.languageArray"languageArray.languageArray);
-
-  // const languageNameArray = languageArray.map((language) => {
-  //   return { languageName: language.languageArray.node.name };
-  // });
-  // console.log("languageNameArray", languageArray);
-
-  //
-  // const langageParamsArray = languageArray.map((language) => {
-  //   return { name: language.node };
-  // });
-  // console.log("langageParamsArray", langageParamsArray);
-
-  // console.log(data.viewer.repositories.nodes);
-  // const datas = data.viewer.repositories.nodes;
-  // console.log(datas);
-  // console.log("language", datas[1].languages.edges[0].node.name);
-  // console.log("size", datas[1].languages.edges[0].size);
-  // console.log("size2", datas[1].languages);
-  // const languages = datas.map((data) => {
-  //   return { languages: data.languages.edges };
-  // });
-  // const languageLength = languages.length;
-  // console.log("languages", languages);
-  // const languagesSizeArray = languages.map((language) => {
-  //   return { languagesArray: language.languages.size };
-  // });
-  // console.log("languagesSizeArray", languagesSizeArray);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
