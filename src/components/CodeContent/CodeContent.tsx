@@ -49,13 +49,12 @@ export const CodeContent: FC = () => {
   console.log("data.viewer", data.viewer);
   console.log("data.viewer.repositories", data.viewer.repositories);
 
-  // リポジトリの配列
+  // // リポジトリの配列
   console.log("data.viewer.repositories.nodes", data.viewer.repositories.nodes);
   const repositoryArray = data.viewer.repositories.nodes;
   console.log("repositoryArray", repositoryArray);
 
-  // languagesの配列
-  // console.log("repositoryArray.languages", repositoryArray.languages);
+  // // languagesの配列
   const languageArray = repositoryArray.map((repository) => {
     return {
       languageArray: repository.languages.edges,

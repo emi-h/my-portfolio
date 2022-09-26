@@ -8,7 +8,8 @@ import {
 export const githubClient = new ApolloClient({
   uri: "https://api.github.com/graphql",
   headers: {
-    authorization: "Bearer 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",
+    // authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
+    authorization: "Bearer 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",
   },
   cache: new InMemoryCache(),
 });
