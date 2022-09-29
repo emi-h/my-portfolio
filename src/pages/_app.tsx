@@ -1,5 +1,6 @@
 import "src/styles/globals.css";
 
+import { ApolloProvider } from "@apollo/client";
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -10,7 +11,6 @@ import Head from "next/head";
 import React from "react";
 import { useState } from "react";
 import { Layout } from "src/components/Layout/Layout";
-import { ApolloClient, ApolloProvider } from "@apollo/client";
 import { githubClient } from "src/libs/apolloClient";
 
 function MyApp({ Component, pageProps }: AppProps) {

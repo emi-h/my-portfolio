@@ -1,4 +1,4 @@
-import { Progress } from "@mantine/core";
+import { gql, useQuery } from "@apollo/client";
 import Image from "next/image";
 import Link from "next/link";
 import BranchImg from "public/i_forkshape.svg";
@@ -7,7 +7,9 @@ import React from "react";
 import { FC } from "react";
 import { Btn } from "src/components/Btn/Btn";
 import styles from "src/components/CodeContent/CodeContent.module.css";
-import { useQuery, gql } from "@apollo/client";
+import { GetRepositoryLanguagesQuery } from "src/gql/graphql";
+
+import { CodeContentLanguage } from "./CodeContentLanguage";
 
 const GET_LOCATIONS = gql`
   query GetRepositoryLanguages {
@@ -44,24 +46,11 @@ const GET_LOCATIONS = gql`
 `;
 
 export const CodeContent: FC = () => {
-  const { loading, error, data } = useQuery<any>(GET_LOCATIONS);
-  console.log("data", data);
-  console.log("data.viewer", data.viewer);
-  console.log("data.viewer.repositories", data.viewer.repositories);
+  const { data, error, loading } =
+    useQuery<GetRepositoryLanguagesQuery>(GET_LOCATIONS);
 
   // // リポジトリの配列
-  console.log("data.viewer.repositories.nodes", data.viewer.repositories.nodes);
-  const repositoryArray = data.viewer.repositories.nodes;
-  console.log("repositoryArray", repositoryArray);
-
-  // // languagesの配列
-  const languageArray = repositoryArray.map((repository) => {
-    return {
-      languageArray: repository.languages.edges,
-      size: repository.languages.totalSize,
-    };
-  });
-  console.log("languageArray", languageArray);
+  const repositoryArray = data?.viewer.repositories.nodes;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -70,50 +59,32 @@ export const CodeContent: FC = () => {
       <h2>github</h2>
       <div className={styles.github_body}>
         <ul>
-          {repositoryArray.map((repository) => {
+          {repositoryArray?.map((repository) => {
             return (
-              <li>
-                <Link href={repository.url}>
+              <li key={repository?.id}>
+                <Link href={repository?.url}>
                   <a>
-                    <h3>{repository.name}</h3>
-                    <p>{repository.description}</p>
+                    <h3>{repository?.name}</h3>
+                    <p>{repository?.description}</p>
                     <div className={styles.icons}>
                       <div className={styles.icon}>
                         <span>
                           <Image src={StarImg} alt="star" />
                         </span>
-                        <span>{repository.stargazerCount}</span>
+                        <span>{repository?.stargazerCount}</span>
                       </div>
                       <div className={styles.icon}>
                         <span>
                           <Image src={BranchImg} alt="branch" />
                         </span>
-                        <span>{repository.forkCount}</span>
+                        <span>{repository?.forkCount}</span>
                       </div>
                     </div>
-                    <div className={styles.langArea}>
-                      <Progress
-                        sections={[
-                          { color: "#3178C6", value: 65.5 },
-                          { color: "#F1E05A", value: 33.7 },
-                          { color: "#EDEDED", value: 0.8 },
-                        ]}
+                    {repository?.languages ? (
+                      <CodeContentLanguage
+                        languageArray={repository?.languages}
                       />
-                      <div className={styles.langText}>
-                        <span className={styles.lang}>
-                          <span>TypeScript</span>
-                          <span className={styles.ratio}>65.5%</span>
-                        </span>
-                        <span className={styles.lang}>
-                          <span>JavaScript</span>
-                          <span className={styles.ratio}>33.7%</span>
-                        </span>
-                        <span className={styles.lang}>
-                          <span>Other</span>
-                          <span className={styles.ratio}>0.8%</span>
-                        </span>
-                      </div>
-                    </div>
+                    ) : null}
                   </a>
                 </Link>
               </li>
