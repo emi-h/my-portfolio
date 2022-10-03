@@ -17,7 +17,7 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
             url
             forkCount
             stargazerCount
-            languages(first: 3) {
+            languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
               pageInfo {
                 hasNextPage
                 hasPreviousPage
