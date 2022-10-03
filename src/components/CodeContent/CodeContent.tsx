@@ -21,8 +21,26 @@ export const CodeContent: FC = () => {
   // // リポジトリの配列
   const repositoryArray = data?.repository.viewer.repositories.nodes;
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (error)
+    return (
+      <section className={styles.github} id="github">
+        <h2>github</h2>
+        <div className={styles.github_body}>
+          <div>failed to load</div>
+          <Btn text="View on GitHub" url="https://github.com/emi-h" />
+        </div>
+      </section>
+    );
+  if (!data)
+    return (
+      <section className={styles.github} id="github">
+        <h2>github</h2>
+        <div className={styles.github_body}>
+          <div>loading...</div>
+          <Btn text="View on GitHub" url="https://github.com/emi-h" />
+        </div>
+      </section>
+    );
   return (
     <section className={styles.github} id="github">
       <h2>github</h2>
@@ -34,7 +52,11 @@ export const CodeContent: FC = () => {
                 <Link href={repository?.url}>
                   <a>
                     <h3>{repository?.name}</h3>
-                    <p>{repository?.description}</p>
+                    <p>
+                      {repository?.description
+                        ? repository?.description
+                        : "No description"}
+                    </p>
                     <div className={styles.icons}>
                       <div className={styles.icon}>
                         <span>
