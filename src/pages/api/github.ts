@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   const octokit = new Octokit({
-    auth: process.env.NEXT_PUBLIC_GITHUB_PERSONAL_ACCESS_TOKEN,
+    auth: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
   });
 
   const QUERY = `
