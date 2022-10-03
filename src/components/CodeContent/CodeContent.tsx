@@ -1,4 +1,3 @@
-import { gql, useQuery } from "@apollo/client";
 import Image from "next/image";
 import Link from "next/link";
 import BranchImg from "public/i_forkshape.svg";
@@ -8,52 +7,22 @@ import { FC } from "react";
 import { Btn } from "src/components/Btn/Btn";
 import styles from "src/components/CodeContent/CodeContent.module.css";
 import { GetRepositoryLanguagesQuery } from "src/gql/graphql";
+import useSWR from "swr";
 
 import { CodeContentLanguage } from "./CodeContentLanguage";
 
-const GET_LOCATIONS = gql`
-  query GetRepositoryLanguages {
-    viewer {
-      repositories(first: 5, orderBy: { field: PUSHED_AT, direction: DESC }) {
-        nodes {
-          id
-          name
-          description
-          url
-          forkCount
-          stargazerCount
-          languages(first: 3) {
-            pageInfo {
-              hasNextPage
-              hasPreviousPage
-            }
-            totalSize
-            totalCount
-            edges {
-              cursor
-              node {
-                id
-                name
-                color
-              }
-              size
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
+type Props = {
+  repository: GetRepositoryLanguagesQuery;
+};
 export const CodeContent: FC = () => {
-  const { data, error, loading } =
-    useQuery<GetRepositoryLanguagesQuery>(GET_LOCATIONS);
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+  const { data, error } = useSWR<Props>(`/api/github`, fetcher);
 
   // // リポジトリの配列
-  const repositoryArray = data?.viewer.repositories.nodes;
+  const repositoryArray = data?.repository.viewer.repositories.nodes;
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
   return (
     <section className={styles.github} id="github">
       <h2>github</h2>
@@ -95,4 +64,5 @@ export const CodeContent: FC = () => {
       </div>
     </section>
   );
+  return null;
 };

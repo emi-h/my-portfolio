@@ -1,6 +1,5 @@
 import "src/styles/globals.css";
 
-import { ApolloProvider } from "@apollo/client";
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -11,7 +10,6 @@ import Head from "next/head";
 import React from "react";
 import { useState } from "react";
 import { Layout } from "src/components/Layout/Layout";
-import { githubClient } from "src/libs/apolloClient";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -19,27 +17,25 @@ function MyApp({ Component, pageProps }: AppProps) {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
   return (
-    <ApolloProvider client={githubClient}>
-      <>
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <ColorSchemeProvider
-          colorScheme={colorScheme}
-          toggleColorScheme={toggleColorScheme}
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          theme={{ colorScheme }}
+          withGlobalStyles
+          withNormalizeCSS
         >
-          <MantineProvider
-            theme={{ colorScheme }}
-            withGlobalStyles
-            withNormalizeCSS
-          >
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </MantineProvider>
-        </ColorSchemeProvider>
-      </>
-    </ApolloProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MantineProvider>
+      </ColorSchemeProvider>
+    </>
   );
 }
 
