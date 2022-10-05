@@ -4,7 +4,7 @@ import Head from "next/head";
 import React from "react";
 // import { Loader } from "@mantine/core";
 import { BlogContent } from "src/components/BlogContent/BlogContent";
-import { client } from "src/libs/client";
+import { client } from "src/lib/client";
 import styles from "src/styles/Home.module.css";
 import { Blog } from "src/type/type";
 

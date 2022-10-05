@@ -26,7 +26,7 @@ const handler = async (
     return;
   }
   const { data: tweets } = await client.tweets.usersIdTweets(user.id, {
-    max_results: 5,
+    max_results: 10,
     "tweet.fields": ["author_id", "created_at", "geo"],
     //     expansions: ["author_id"], //expansionしてuser.fieldsを一緒に取得するのが理想
     //     "user.fields": ["profile_image_url", "username", "name"],

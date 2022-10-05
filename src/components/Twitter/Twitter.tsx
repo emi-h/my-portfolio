@@ -18,7 +18,7 @@ export const Twitter: FC = () => {
     tweets: TwitterResponse<usersIdTweets>["data"];
     user: TwitterResponse<findUserByUsername>["data"];
   }>(`/api/tweet`, async (url) => (await fetch(url)).json());
-  // console.log(data);
+  // console.log("data", data);
   return (
     <section className={styles.twitter} id="twitter">
       <h2>twitter</h2>
