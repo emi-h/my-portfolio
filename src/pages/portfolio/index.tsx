@@ -3,7 +3,7 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import React from "react";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
-import { client } from "src/libs/client";
+import { client } from "src/lib/client";
 import styles from "src/styles/Home.module.css";
 import { Portfolio } from "src/type/type";
 
