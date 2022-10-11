@@ -2,3 +2,8 @@
 
 - Next.js
 - TypeScript
+- Prettier
+- ESLint
+- Mantine
+
+- GraphQL
