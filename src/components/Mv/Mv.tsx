@@ -12,7 +12,7 @@ export const Mv: FC = () => {
     <div className={styles.mv}>
       <div className={styles.mv_inner}>
         <div>
-          <h2>Emi Portfolio</h2>
+          <h2>Emi&apos;s sample Portfolio</h2>
           <p>Emiのポートフォリオのためのページです</p>
         </div>
         <div>

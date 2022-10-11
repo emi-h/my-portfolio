@@ -41,7 +41,7 @@ export const Header: FC = () => {
         </MediaQuery>
         <h1 className={styles.logo}>
           <Link href="/">
-            <a>Emi Portfolio</a>
+            <a>Emi&apos;s sample Portfolio</a>
           </Link>
         </h1>
         <div className={styles.navArea}>

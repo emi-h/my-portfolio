@@ -41,7 +41,7 @@ const Home: NextPage<{
     <>
       <Head>
         <title>Emi H | Top</title>
-        <meta name="description" content="Emi H portfolio top page" />
+        <meta name="description" content="Emi H's sample portfolio top page" />
       </Head>
 
       <Mv />
