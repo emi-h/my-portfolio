@@ -1,5 +1,7 @@
 .twitter_box {
-  margin-bottom: 70px;
+  height: 823px;
+  margin-bottom: 32px;
+  overflow: scroll;
 }
 .twitter_list li {
   margin-bottom: 56px;

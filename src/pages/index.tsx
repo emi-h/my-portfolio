@@ -8,7 +8,7 @@ import { CodeContent } from "src/components/CodeContent/CodeContent";
 import { Mv } from "src/components/Mv/Mv";
 import { PortfolioContent } from "src/components/PortfolioContent/PortfolioContent";
 import { Twitter } from "src/components/Twitter/Twitter";
-import { client } from "src/libs/client";
+import { client } from "src/lib/client";
 import styles from "src/styles/Home.module.css";
 import { Blog, Portfolio } from "src/type/type";
 

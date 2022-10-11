@@ -35,25 +35,13 @@
 .lang {
   margin-right: 20px;
 }
-.lang::before {
-  content: "";
+.langcolor {
   display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: transparent;
-  margin-right: 6px;
 }
-.lang:nth-child(1)::before {
-  background: #3178c6;
-}
-.lang:nth-child(2)::before {
-  background: #f1e05a;
-}
-.lang:nth-child(3)::before {
-  background: #ededed;
-}
-.lang span:first-child {
+.lang span:not(:last-child) {
   margin-right: 6px;
 }
 .ratio {
